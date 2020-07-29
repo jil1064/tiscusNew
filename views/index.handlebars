@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Tiscus - Skip planning now. Just enjoy :P</title>
+    <link rel="icon" href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link href="/css/standard.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Thasadith' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese'
+          rel='stylesheet'>
+    <script src='js/three.min.js'></script>
+    <script src="js/vanta.waves.min.js"></script>
+
+</head>
+
+<body>
+
+<!--
+    <div class='welcome'>
+        <br><br>
+        <p>Welcome to our prototype.</p>
+    </div>
+-->
+
+<div id="bg2"></div>
+
+<!--
+    <div id="topbar">
+        <a href='http://tiscus.com/'><img id="logo" src="img/logo2.png"></a> 
+    </div>
+-->
+
+<div class="col-sm-4">
+
+    <div class='leftPage ads' style='border: 2px dashed white; text-align: center; color: white'><br>here will be ads
+    </div>
+
+    <div class='functionalPage page leftPage text'>
+        <div class='genBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+        </div>
+        <div class='info'>
+            <button id='funcMeet' class='funcbtn' style='background:url(img/Tcmeetimg.jpg) no-repeat 0 -200px;'>Tcmeet
+            </button>
+            <button id='funcWITH' class='funcbtn'
+                    style='background:url(img/withimg.jpg) no-repeat center; background-size: 100%;'>WITH
+            </button>
+            <button class='funcbtn'
+                    style="background:url(img/Tiscusserimg.jpg) no-repeat 0 -110px; background-size: 100%;">Tiscusser
+            </button>
+        </div>
+    </div>
+
+    {{> template}}
+    {{> TcMeet}}
+
+    <div class='WITHPage page leftPage text'>
+        <div class='genBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+        </div>
+        <p>&nbsp; to be designed</p>
+
+    </div>
+
+    <div class='notifyPage page leftPage text'>
+        <div class='genBar'>
+            <button><img class='icon notiCheck' id='back' src='img/back.png'></button>
+        </div>
+        <div class='info' style='text-align: center; padding: 0;'>
+            <div class='notiCard'>Joyce tc you for<br>
+                <span style="font-family: 'Arial';">Bible Study</span>
+                <img class='profilePicNoti' src='img/profile.png'>
+                <div class='response' style='text-align: center; margin: 5px 0 0 0;'>
+                    <button id='reject'><img class='icon' src='img/reject.png'></button>
+                    <span style='color:transparent'>click on the right :P</span>
+                    <button id='accept'><img class='icon' src='img/ok2.png'></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="col-sm-4">
+
+    <div class='monthView page'>
+        <div class='monthBar text'>
+            <div class='planetDays'>Sun</div>
+            <div class='planetDays'>Mon</div>
+            <div class='planetDays'>Tue</div>
+            <div class='planetDays'>Wed</div>
+            <div class='planetDays'>Thu</div>
+            <div class='planetDays'>Fri</div>
+            <div class='planetDays'>Sat</div>
+            <br>
+            <button id='chooseMonth'><img class='icon' src='img/choose.png'></button>
+            <input type="month" id='selectMonth'>
+        </div>
+        <div class='dayInfo'>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>23</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>24</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>25</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>26</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>27</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>28</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>29</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>30</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>1</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>2</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+            <div class='dayCard'>
+                <div class='monthDate'><a href='#'>3</a></div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+                <div>
+                    <button class='monthEvent'>Converge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="today text">
+        <button>
+            <div id="todayDate" class='todayDate1' style='z-index: 799;'>6/27 Thu</div>
+        </button>
+        <button><img class='icon' id='notiBell' src='img/notiBell2.png'></button>
+        <button><img class='icon' id="createSlot" src='img/createSlot.png'></button>
+        <button data-toggle="modal" data-target="#deleteModal"><img class="icon2" id="todayDel" src="img/delete.png">
+        </button>
+        <button><img class="icon2" id="todayEdit" src="img/edit.png"></button>
+        <div class='todayEvents'>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style='border-color: #6a903a;'>Converge workshop; Basement</div>
+                </button>
+            </div>
+            <br>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style="border-color: #ffb999">Converge workshop; Basement</div>
+                </button>
+            </div>
+            <br>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style="border-color: #ffdd00">Converge workshop; Basement</div>
+                </button>
+            </div>
+            <br>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style='border-color: #5986FD;'>Converge workshop; Basement</div>
+                </button>
+            </div>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style='border-color: #0091bd;'>Converge workshop; Basement</div>
+                </button>
+            </div>
+            <br>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style="border-color: #bd0042">Converge workshop; Basement</div>
+                </button>
+            </div>
+            <br>
+            <div class="timeSlot">
+                <p>9:00am-12:00pm</p>
+                <button>
+                    <div class="timeCard" style="border-color: #dadada">Converge workshop; Basement</div>
+                </button>
+            </div>
+            <br><br><br><br><br><br>
+        </div>
+    </div>
+
+    <button id="functional"></button>
+    <img class='icon funcicon' src='img/functional2.png'>
+    <button id="account"></button>
+    <img class='icon accounticon' src='img/account.png'>
+
+
+</div>
+
+<div class="col-sm-4">
+    <div class='rightPage ads' style='border: 2px dashed white; text-align: center; color: white'><br>here will be ads
+    </div>
+
+    <div class='editPage page rightPage text'>
+
+        <div class='editBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+            <button data-toggle="modal" data-target="#deleteModal"><img class='icon' id='editDel' src='img/delete2.png'>
+            </button>
+            <button><img class='icon' id='ok' src='img/ok.png'></button>
+        </div>
+
+        <div class='info'>
+            <div class='colorChoice'>
+                <button id='yellowDot'>
+                    <div class='colorDot' style='background:#ffdd00'></div>
+                </button>
+                <button id='greenDot'>
+                    <div class='colorDot' style='background:#6a903a'></div>
+                </button>
+                <button id='cyanDot'>
+                    <div class='colorDot' style='background:#0091bd'></div>
+                </button>
+                <button id='blueDot'>
+                    <div class='colorDot' style='background:#5986FD'></div>
+                </button>
+                <button id='redDot'>
+                    <div class='colorDot' style='background:#bd0042'></div>
+                </button>
+                <button id='pinkDot'>
+                    <div class='colorDot' style='background:#ffb999'></div>
+                </button>
+                <button id='grayDot'>
+                    <div class='colorDot' style='background:#DADADA'></div>
+                </button>
+            </div>
+
+            <input id='setDate' placeholder="2019-06-27" onfocus="(this.type='date')" onblur="(this.type='text')"
+                   style='width: 150px'>
+            <p>from&emsp;<input id='setTime1' placeholder="9:00" onfocus="(this.type='time')"
+                                onblur="(this.type='text')"><br>
+                until&emsp;<input id='setTime2' placeholder="12:00" onfocus="(this.type='time')"
+                                  onblur="(this.type='text')"><br>
+                <input id='setDate2' placeholder="Different day?" onfocus="(this.type='date')"
+                       onblur="(this.type='text')" style='width: 150px'></p>
+            <textarea id='note' name="note" rows="2" cols="30">Converge workshop; Basement</textarea>
+
+            <button id='reoc' class="text" data-toggle="collapse" href="#reocGroup" role="button" aria-expanded="false"
+                    aria-controls="reocGroup">&SmallCircle; Reoccur?
+            </button>
+            <div class="collapse" id="reocGroup">
+                <div class="card card-body">
+                    <p>end&emsp;<input id='occurUntil' placeholder="2019-12-27" onfocus="(this.type='date')"
+                                       onblur="(this.type='text')" style='width: 135px;'></p>
+                    <div style='column-count: 3; -moz-column-count: 3; -webkit-column-count: 3; margin-top: -10px;'>
+                        <label class="reocChoice">Daily<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Weekly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Biweekly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Monthly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Yearly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Mon<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Tue<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Wed<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Thu<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Fri<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Sat<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Sun<input type='checkbox'><span class="checkmark"></span></label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button class='shareable'>&SmallCircle; Share WITH</button>
+        </div>
+    </div>
+
+    <div class='accountPage page rightPage text'>
+        <div class='genBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+            <button><img class='icon' id='setting' src='img/setting.png'></button>
+        </div>
+        <div class='info' style='text-align: center;'>
+            <p></p>
+            <a href='#'><img id='profilePic' src='img/profile.png'></a>
+            <p style='font-size: 28px; font-weight: 900;'>Jianan Liang</p>
+            <p style='font-size: 14.5px; margin-top: -10px;'>jil1064@ucsd.edu</p>
+            <button id='editAccount'>account</button>
+            <div id='extendCard'>
+                <br>
+                <p>Screenshot-insert/Integrate</p>
+                <div style='margin-top: -4px;'>
+                    <button><img class='icon2' id='screenshotAI' src='img/ScreenshotAI.png'></button>
+                    <button><img class='icon2' id='gooCal' src='img/gooCal.jpg' style='margin-left: 25px;'></button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class='editAccountPage page rightPage text'>
+        <div class='genBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+            <button><img class='icon' id='ok' src='img/ok.png'></button>
+        </div>
+        <div class='editAccountInfo' style='text-align: center;'>
+            <br>
+            <input type='name' id='editAccountName' placeholder="Jianan Liang" style='width: 85%;'><br><br>
+            <input type='email' id='editAccountEmail' placeholder="jil1064@ucsd.edu" style='width: 85%;'><br><br>
+            <input type='password' id='editAccountPw' placeholder="*************" style='width: 85%;'><br><br>
+            <input type='password' id='confirmAccountPw' placeholder="confirm password" style='width: 85%;'>
+        </div>
+    </div>
+
+    <div class='settingPage page rightPage text'>
+        <div class='genBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+        </div>
+        <div class='info'>
+            <div class='allowNotifyDiv' style='position: relative; cursor: pointer;'>
+                <p>Notifications</p>
+                <button class='allowNotify'></button>
+            </div>
+            <br>
+            <button id='logOut' class='text'>log out</button>
+
+        </div>
+    </div>
+
+    <div class='screenshotAIPage page rightPage text'>
+        <div class='genBar'>
+            <button><img class='icon' id='back' src='img/back.png'></button>
+            <button><img class='icon AIcomplete' id='ok' src='img/ok.png'></button>
+            <button></button>
+        </div>
+        <div class='info sAI1'>
+            <div id="drop-area" class='text'>
+                <form class="my-form">
+                    <p>Drop image/pdf here or</p>
+                    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                    <label id="selectFile" for="fileElem">Select file</label>
+                </form>
+            </div>
+            <button><img class='icon' id='AInext' src='img/next.png'></button>
+        </div>
+        <div class='info sAI2' style='display: none;'>
+            <p></p>
+            <button id='reoc2' class="text" data-toggle="collapse" href="#reocGroup2" role="button"
+                    aria-expanded="false" aria-controls="reocGroup2">&SmallCircle; Reoccur?
+            </button>
+            <div class="collapse" id="reocGroup2">
+                <div class="card card-body">
+                    <p>end&emsp;<input id='occurUntil' placeholder="2019-12-27" onfocus="(this.type='date')"
+                                       onblur="(this.type='text')" style='width: 135px'></p>
+                    <div style='column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;  margin: -10px 0 10px 0;'>
+                        <label class="reocChoice">Weekly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Biweekly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Monthly<input type='checkbox'><span class="checkmark"></span></label>
+                        <label class="reocChoice">Yearly<input type='checkbox'><span class="checkmark"></span></label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span style='text-decoration: underline'>workshop</span><br>
+                    7/29 8:00am-10:30am<br>
+                    <span style='text-decoration: underline'>ECON 100A</span><br>
+                    Tu Thu 10:30am-10:50am<br>
+                    <span style='text-decoration: underline'>COGS 127</span><br>
+                    Mon Wed Fri 3:00pm-3:50pm
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-900" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text" style='text-align: center;'>
+                <p>Are you sure to delete...</p>
+                <button id='delThis' class='text'>only this event</button>
+                <button id='delReoc' class='text'>its reoccuring events</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="waitModal" tabindex="-900" role="dialog" aria-labelledby="waitModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text" style='text-align: center;'>
+                <p>Get a time with current responses(9)?</p>
+                <button id='delTc' class='text'>delete event</button>
+                <button id='confirm' class='text'>confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.3.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+
+</body>
+
+<script src="js/messy.js"></script>
+<script>
+
+    VANTA.WAVES({
+        el: "#bg2",
+//  color: 0x1a77a6,
+        color: 0x3c3c3c,
+        waveSpeed: 0.25
+    })
+</script>
+
+
+   

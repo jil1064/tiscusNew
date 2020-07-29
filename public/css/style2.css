@@ -1,0 +1,888 @@
+.welcome {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.75;
+    text-align: center;
+    font-size: calc(35px + 2.5vw);
+    font-family: cursive;
+    color: white;
+    z-index: 999;
+}
+
+#bg {
+    z-index: -999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( -26.5deg,  rgba(247,255,160,1) 28.2%, rgba(114,243,252,1) 70.8% );
+    background: -moz-linear-gradient( 76.5deg,  rgba(247,255,160,1) 28.2%, rgba(114,243,252,1) 70.8% );
+    background: -webkit-linear-gradient( 76.5deg,  rgba(247,255,160,1) 28.2%, rgba(114,243,252,1) 70.8% );
+}
+
+#bg2 {
+    z-index: -999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+/*
+    background-image: linear-gradient( -26.5deg,  rgba(67,189,186,1) 28.2%, rgba(114,243,252,1) 70.8% );
+    background: -moz-linear-gradient( 76.5deg,  rgba(67,189,186,1) 28.2%, rgba(114,243,252,1) 70.8% );
+    background: -webkit-linear-gradient( 76.5deg,  rgba(67,189,186,1) 28.2%, rgba(114,243,252,1) 70.8% );
+*/
+}
+
+#bg3 {
+    z-index: -999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( -26.5deg,  rgba(67,189,186,1) 28.2%, rgba(114,243,252,1) 70.8% );
+    background: -moz-linear-gradient( 76.5deg,  rgba(67,189,186,1) 28.2%, rgba(114,243,252,1) 70.8% );
+    background: -webkit-linear-gradient( 76.5deg,  rgba(67,189,186,1) 28.2%, rgba(114,243,252,1) 70.8% );
+}
+
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 8vw;
+}
+
+.monthView {
+    z-index: 400;
+    width: 31vw;
+    height: 100vh;
+    left: 34.5vw;
+    top: 0;
+}
+
+.monthBar {
+    position: absolute;
+    top: 10px;
+    left: 2%;
+    width: 98%;
+}
+
+.planetDays {
+    display: inline-block;
+    position: relative;
+    width: 13%;
+    text-align: center;
+    font-size: 10px;    
+}
+
+#chooseMonth {
+    position: absolute;
+    top: 5.5vh;
+    right: 1.4vw;
+    filter: grayscale(100%);
+}
+
+#selectMonth {
+    display: none;
+    position: absolute;
+    top: 7.5vh;
+    left: 5vw;
+    width: 16vw;
+}
+
+.dayInfo {
+    position: absolute;
+    display: inline-block;
+    width: 98%;
+    height: 100%;
+    top: 18vh;
+    left: 2%;
+}
+
+.dayCard {
+    position: relative;
+    width: 13.1%;
+    height: 15vh;
+    overflow: hidden;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.dayCard div{
+    width: 100%;
+    height: 12px;
+    margin-top: 3px;
+}
+
+.dayCard a, .dayCard a:hover, .dayCard a:visited { 
+    color: darkgray;
+    text-decoration: none;
+} 
+
+.monthDate {
+    font-size: 12px;
+    color: darkgray;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.monthEvent {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    background: #A4C4FF;
+    font-size: 10px;
+    font-weight: bold;
+    left: 0;
+}
+
+#todayDate {
+    position: fixed;
+    left: 44vw;
+    top: 7.5vh;
+    display: inline-block;
+    width: 12vw;
+/*    border-radius: 5px;*/
+    font-family: 'Arial';
+    font-size: 27px;
+    font-weight: lighter;
+}
+
+.todayDate1 {
+    background: white;
+/*    color: #87f1ef;*/
+    color: #5986fd;
+}
+
+.todayDate2 {
+    color: white;
+/*    background: #87f1ef;*/
+    background: #5986fd;
+}
+
+.todayEvents {
+    width: 30vw;
+    height: 90vh;
+    left: 35vw;
+    top: 15.5vh;
+    overflow: scroll;
+    position: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.timeSlot {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    font-family: 'Thasadith';
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.5vw;
+    color: white;
+}
+
+.timeCard {
+    color: dimgray;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    width: 22vw;
+    height: auto;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+/*    border-radius: 2vw;*/
+    box-shadow: 0 2px 4px rgb(0,0,0,.4);
+    padding: 5px 0;
+    background: white;
+    margin-top: -5px;
+}
+
+.meetCard, .notiCard {
+    position: relative;
+    display: inline-block;
+    width: 18vw;
+    height: auto;
+    border: 6px solid #5986fd;
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgb(0,0,0,.4);
+    padding: 0;
+    background: white;
+    margin-top: 15px;
+}
+
+.notiCard {
+    text-align: left;
+    padding: 8px 8px 2px 8px;
+}
+
+.response {
+    font-size: 6px;
+}
+
+#searchResult {
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 80%;
+    height: calc(9vw + 130px);
+    background: white;
+    z-index: 700;
+    box-shadow: 0 2px 3px rgb(0,0,0,.4);
+    text-align: center;
+}
+
+.meetGroupCard {
+    position: relative;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border: 6px solid #5986fd;
+    border-radius: 2vw;
+/*    box-shadow: 0 2px 4px rgb(0,0,0,.4);*/
+    padding: 0;
+    background: white;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.chooseTimeCard {
+    text-align: left;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+    height: auto;
+/*
+    border: 6px solid white;
+    border-radius: 2vw;
+    box-shadow: 0 2px 4px rgb(0,0,0,.4);
+*/
+    padding: 5px 0px;
+    background: white;
+    cursor: pointer;
+}
+
+.chooseTimeCard2 {
+/*    border-color: #5986fd;*/
+    text-decoration: underline;
+    color: cadetblue;
+}
+
+.otherTime {
+    display: none;
+}
+
+.meetStep2 input, .meetInfo input {
+    position: absolute; 
+    width: 80%;
+}
+
+button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#todayDel {
+    z-index: 1;
+    position: absolute;
+    left: 1.5vw;
+    top: -99px;
+}
+
+#todayEdit {
+    z-index: 2;
+    position: absolute;
+    right: 1.5vw;
+    top: -50vh;
+}
+
+#functional {
+    position: fixed;
+    left: 30vw;
+    top: -8vw;;
+    padding: 0 0 0 75px;
+    width: 11vw;
+    height: 11vw;
+/*    border-radius: 50%;*/
+    transform: rotate(45deg);
+    background: white;
+    box-shadow: 0 0 4px 2px rgb(0,0,0,.3);
+}
+
+.funcicon {
+    position: fixed;
+    cursor: pointer;
+    left: 33.8vw;
+    top: .25vw;
+}
+
+.accounticon {
+    position: fixed;
+    cursor: pointer;
+    right: 33.7vw;
+    top: .25vw;
+}
+
+#createSlot {
+    width: 45px;
+    position: fixed;
+    left: 57vw;
+    top: 6.7vh;
+}
+
+#account {
+    position: fixed;
+    right: 30vw;
+    top: -8vw;
+    padding: 0 75px 0 0;
+    width: 11vw;
+    height: 11vw;
+/*    border-radius: 50%;*/
+    transform: rotate(45deg);
+    background: white;
+    box-shadow: 0 0 4px 2px rgb(0,0,0,.3);
+}
+
+.page {
+    display: inline-block;
+    position: fixed;
+    background: white;
+    box-shadow: 0 2px 4px rgb(0,0,0,.4);
+    display: none;
+}
+
+.rightPage {
+    z-index: 800;
+    width: 22vw;
+    height: calc(15vw + 260px);
+    right: 8.5%;
+    top: 10%;
+    position: fixed;
+}
+
+.leftPage {
+    z-index: 800;
+    width: 22vw;
+    height: calc(15vw + 260px);
+    left: 8.5%;
+    top: 10%;
+    position: fixed;
+}
+
+#profilePic {
+    width: 5.5vw;
+    margin-top: 2vh;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.profilePicMeet {
+    width: 3.5vw;
+    margin-top: 2vh;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.profilePicNoti {
+    width: 3.5vw;
+    margin-top: 2vh;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    right: 0.5vw;
+    top: -0.5vw;
+}
+
+#editDel {
+    position: absolute;
+    left: 9.25vw;
+    top: 0;    
+}
+
+#notiBell {
+    position: fixed;
+    left: 38.8vw;
+    top: 6.5vh;
+    width: 50px;
+}
+
+.colorChoice {
+    width: 110%;
+    margin-left: -5%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.colorDot {
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+/*
+.text {
+    font-family: 'Thasadith';
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+}
+*/
+
+#note {
+    border: none;
+    resize: none;
+    width: 100%;
+}
+
+input {
+    width: 90px;
+    border: none;
+}
+
+::placeholder {
+    color: darkgray; 
+}
+
+#reoc, #reoc2 {
+    color: darkgray;
+}
+
+.shareable {
+    color: darkgray;
+}
+
+.shareable2 {
+    color: #5986fd;
+}
+
+.reocChoice {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.reocChoice input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #e4e4e4;
+}
+
+.reocChoice input:checked ~ .checkmark {
+  background: gray;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.reocChoice input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.reocChoice .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#newGroupName {
+    display: none;
+    text-align: center;
+    width: 80%;
+}
+
+#editAccount, #addToGroup, #createGroup, #meetChoose, #submitGroup, #gooCal {
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+    color: cadetblue;
+    font-weight: 900;
+    padding: 0 5px;
+}
+
+#sendInvi {
+    padding: 5px 15px; 
+    background: #5986fd; 
+    font-family: 'Arial';
+    color: white; 
+}
+
+#extendCard {
+    margin-top: 5vh;
+/*
+    color: white;
+    background-image: linear-gradient( 90deg,  rgba(0, 210, 255, 1) 0%, rgba(58, 71, 213, 1) 100% );
+    background: -moz-linear-gradient( 90deg,  rgba(0, 210, 255, 1) 0%, rgba(58, 71, 213, 1) 100% );
+    background: -webkit-linear-gradient( 90deg,  rgba(0, 210, 255, 1) 0%, rgba(58, 71, 213, 1) 100% );
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgb(0,0,0,.4);
+*/
+}
+
+#screenshotTC {
+/*    border: 1px solid cadetblue;*/
+/*    border-radius: 5px;*/
+    background-color: #5986fd;
+    font-family: 'Arial';
+    color: white;
+    padding: 7px 20px;
+}
+
+#extend, #extend:hover {
+    text-decoration: none;
+    background: white;
+    border-radius: 5px;
+    padding: 0 6px;
+}
+
+.allowNotify {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.allowNotify2 {
+    border: none;
+    background: #5986fd;
+}
+
+#delThis, #delTc, #delReoc, #confirm {
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#logOut {
+    color: darkgray;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 45px 0;
+}
+#drop-area.highlight {
+  border-color: purple;
+}
+.my-form {
+  margin-bottom: 10px;
+}
+#gallery {
+  margin-top: 10px;
+}
+#gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#selectFile {
+/*  font-size: 16px;*/
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid cadetblue;
+  border-radius: 5px;
+  color: cadetblue;
+  font-weight: 900;
+  padding: 0 5px;
+}
+
+#fileElem {
+  display: none;
+}
+
+.AIcomplete {
+    opacity: 0;
+}
+
+#AInext, #meetNext {
+    position: absolute;
+    bottom: 50px;
+    left: 9.5vw;
+}
+
+.functionalPage {
+    text-align: center;
+}
+
+.funcbtn {
+    width: 100%;
+    padding: 8px 0;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#createMeet {
+    color: white;
+    font-size: 4vw;
+    font-weight: 900;
+    position: absolute;
+    right: 0.5vw;
+    top: -1.25vw;
+}
+
+.creaMeComplete {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .ads {
+        display: none;
+    }
+    
+    .checkmark {
+        width: 15px;
+        height: 15px;
+        left: -5px;
+    }
+    
+    .reocChoice .checkmark:after {
+        left: 5px;
+        top: 1px;
+    }
+    
+    #searchResult {
+        top: 30px;
+        width: 80%;
+        height: 55vh;
+    }
+    
+/*
+    .text {
+        font-size: 19px;
+    }
+*/
+    
+    #topbar { 
+        display: none;
+    }
+    
+    #loginlogo {
+        width: 52vw;
+    }
+    
+    .monthBar {
+        top: -4.5px;
+    }
+    
+    #chooseMonth {
+        top: 26px;
+        right: 10px;
+}
+
+    #selectMonth {
+        top: 32px;
+        left: 12.5vw;
+        width: 65vw;
+    }
+    
+    .dayInfo {
+        top: 75px;
+    }
+    
+    .dayCard {
+        margin-right: -1px;
+    }
+    
+    .monthEvent {
+        font-size: 9px;
+    }
+    
+    #todayDate {
+        width: 44vw;
+        left: 28%;
+        top: 23px;
+    }
+
+    .timeSlot {
+        font-size: 17px;
+        margin-top: 4vw;
+    }
+    
+    .timeCard {
+        width: 60vw;
+    }
+    
+    .todayEvents {
+        width: 100vw;
+        height: 90vh;
+        left: 0;
+        top: 13vh;
+        overflow: scroll;
+        position: fixed;
+    } 
+    
+    #todayDel {
+        left: 4vw;
+    }
+    
+    #todayEdit {
+        Right: 4vw;
+    }
+    
+    .page {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #profilePic {
+        width: 20vw;
+    }
+    
+    #editDel {
+        left: 45vw;  
+    }
+    
+    .colorDot {
+        width: 10vw;
+        height: 10vw;
+    }
+    
+    #note {
+        margin-left: -1vw;
+    }
+    
+    #functional {
+        left: -18vw;
+        top: auto;
+        bottom: -18vw;
+        width: 36vw;
+        height: 36vw;
+        padding: 0 0 0 20vw;
+        transform: rotate(45deg);
+    }
+    
+    #createSlot { 
+        width: 17vw;
+        left: 76vw;
+        top: 17px;
+    }
+    
+    .funcicon {
+        left: 1.5vw;
+        top: auto;
+        bottom: 1.5vw;
+    }
+    
+    .accounticon {
+        right: 1.5vw;
+        top: auto;
+        bottom: 1.5vw;
+    }
+    
+    #account {
+        right: -18vw;
+        top:auto;
+        bottom: -18vw;
+        width: 36vw;
+        height: 36vw;
+        padding: 0 22vw 0 0;
+        transform: rotate(45deg);
+    }
+    
+    #AInext, #meetNext {
+        bottom: 10vh;
+        left: 43vw;
+        width: 15vw;
+    }
+    
+    #createMeet {
+        font-size: 15vw;
+        right: 2vw;
+        top: -5vw;
+    }
+
+    .meetCard, .notiCard {
+        width: 80vw;
+    }
+    
+    .response {
+/*        font-size: 12.5px;*/
+    }
+    
+    .profilePicMeet {
+        width: 15vw;
+    }
+    
+    .profilePicNoti {
+        width: 13vw;
+        top: -1vw;
+        right: 3vw;
+    }
+    
+    #notiBell {
+        width: 19vw;
+        left: 6vw;
+        top: 15px;
+    }
+    
+    .chooseTimeCard {
+        font-size: 16px;
+    }
+}

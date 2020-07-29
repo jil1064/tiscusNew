@@ -1,0 +1,81 @@
+<link href="/css/TcMeet.css" rel="stylesheet">
+
+
+<div class='meetPage page leftPage text'>
+    <div class='genBar'>
+        <button><img class='icon' id='back' src='img/back.png'></button>
+        <button id='createMeet'>+</button>
+    </div> 
+    <div class='info' style='text-align: center; padding: 0;'>
+
+        <button data-toggle="modal" data-target="#waitModal">
+            <div class="meetCard waiting" style='border-color: #e6e6e6;'><span style="font-family: 'Arial';">Bible Study</span><br>
+            waiting for 5 response(s)</div>
+        </button>
+
+        <button><div class="meetCard done"><span style="font-family: 'Arial';">9/21 - SCF meeting</span><br>
+            @Someone's apt<br>
+            Sat 7:00pm-8:00pm</div></button>
+    </div>  
+</div>    
+
+<div class='createMeetPage page leftPage text'>
+    <div class='genBar'>
+        <button><img class='icon' id='back' src='img/back.png'></button>
+    </div> 
+    <div class='info meetStep1'>
+        <input id='tcSearch' type='search' placeholder='who? group/user(s)' style='position: absolute; width: 80%;'>
+        {{!-- <div id='searchResult'><br>search result<br>(Imagine you have clicked 2 users and 2 groups)</div> --}}
+              {{#each possibleriends}}
+            <div id="searchResult" style="display: none;" data-toggle="modal" data-target="#fakeAdd">
+                <img class="friendPhoto" src="img/friendProfile.png">
+                <a class="friendText">{{name}}</a>
+                <a class="addFriendButton">
+                <img class="addIcon" src="img/addFriendBefore.svg">
+                </a>
+            </div>
+            {{/each}}
+        <br><br>
+        <div id='resultInfo' style='display: none;'>
+            <a href='#' class="user_list" id="user1"><img class='profilePicMeet' src='img/profile.png'></a>
+            <a href='#' class="user_list" id="user2"><img class='profilePicMeet' src='img/profile.png'></a>
+            <div class='meetGroups'>
+                <button class='meetGroupCard'>UCSD SCF</button>
+                <button class='meetGroupCard'>DSGN 1 Proj#1</button>
+            </div>
+        </div>
+        <br>
+        <div style='text-align: center;'>
+            <p><button id='addToGroup'>add to the group</button></p>
+            <button id='createGroup'>create a new group</button>
+            <p><input id='newGroupName' type='text' placeholder="the new group's name"></p>
+            <p><button id='submitGroup' style='display: none;'>submit</button></p>
+            <button><img class='icon' id='meetNext' src='img/next.png'></button>
+        </div>
+    </div>  
+    <div class='info meetStep2' style='display: none;'>
+        <br>
+        <form id='tcForm'>
+        <input id="tcTitle" type='text' placeholder='Event Title'>
+        <br>
+        <input id="tcNotes" type='text' placeholder='notes (optional)'>
+        <br>
+        <input id="tcDuration" type='number' placeholder='how many minutes?'>
+        <br><br>
+        <p>Date Range (optional)
+            <br><input type='date' onfocus="(this.type='date')" onblur="(this.type='text')" placeholder='06/27/2019'>
+            <br>to
+            <br><input type='date' onfocus="(this.type='date')" onblur="(this.type='text')" placeholder='07/27/2019'>
+        </p><br>
+        <p>Time Range (optional)
+            <br><input type='time' onfocus="(this.type='time')" onblur="(this.type='text')" placeholder='9:00 AM'>
+            <br>to
+            <br><input type='time' onfocus="(this.type='time')" onblur="(this.type='text')" placeholder='9:00 PM'>
+        </p>                       
+        <br><br>
+        <div style='text-align: center;'>
+            <button id='sendInvi' type='submit'>Tc Them!</button>
+        </div>
+        </form>
+    </div>            
+</div> 

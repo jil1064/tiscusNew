@@ -1,0 +1,188 @@
+/*fonts*/
+
+.title {
+    font-family: 'Roboto';
+    color: white; 
+    margin-top: .7vw; 
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.labelt {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.3vw;
+    color: #5986fd;
+}
+
+.normalt {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.3vw;
+}
+
+.nonimpt {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.3vw;
+    color: darkgray;
+}
+
+/*layouts*/
+
+.editBar, .genBar {
+    display: inline-block;
+    background-color: #5986FD;
+    width: 100%;
+    height: 3.5vw; 
+}
+
+#ok, #setting {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#back {
+    position: absolute;
+    left: -2px;
+    top: 0;
+}
+
+.info {
+    position: absolute;
+    top: 3.5vw;
+    height: calc(11.5vw + 260px);
+    width: 100%;
+    padding: 0.1vw 2.2vw;
+    overflow: scroll;
+}
+
+/*elements*/
+
+.circle {
+    border-radius: 50%;
+    background: #5986fd;
+    width: 3.5vw;
+    height: 3.5vw;
+    display: inline-block;
+    margin: 0 .25vw;
+}
+
+.icon {
+    width: 3.5vw;
+}
+
+.icon2 {
+    width: 3vw;
+}
+
+.dbutton {
+    border: 1px solid lightgray;
+    color: #bdbdbd;
+    background: white;
+    border-radius: 3vw;
+    width: auto;
+    height: auto;
+    padding: .5vw 1.5vw;
+    font-family: 'Roboto';
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.lbutton {
+    border: 1px solid #5986fd;
+    color: #5986fd;
+    background: white;
+    border-radius: 3vw;
+    width: auto;
+    height: auto;
+    padding: .5vw 1.5vw;
+    font-family: 'Roboto';
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.pbutton {
+    border: 1px solid #5986fd;
+    color: white;
+    background: #5986fd;
+    border-radius: 3vw;
+    width: auto;
+    height: auto;
+    padding: .5vw 1.5vw;
+    font-family: 'Roboto';
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+/*color theme*/
+
+.blue1 {
+    background: #5986fd;
+}
+
+.blue2 {
+    background: #93b0fe;
+}
+
+.blue3 {
+    background: #c5d5fe;
+}
+
+.blue4 {
+    background: #e6edff;
+}
+
+@media (max-width: 480px) {
+
+    /*fonts*/
+    .title {
+        margin-top: 2.5vw; 
+        font-size: 7vw;
+    }
+    
+    .labelt, .normalt, .nonimpt {
+        font-size: 5.5vw;
+    }
+    
+    /*layouts*/
+    
+    .editBar, .genBar {
+        height: 15vw;
+    }
+    
+    #ok, #setting {
+        top: 1vh;
+    }
+
+    #back {
+        top: 1vh;
+    }
+    
+    .info {
+        top: 15vw;
+        height: 90vh;
+        padding: 0 10vw;
+    }
+    
+    /*elements*/
+    
+    .circle {
+        width: 16vw;
+        height: 16vw;
+        margin: 0 1vw;
+    }
+    
+    .icon, .icon2 {
+        width: 12vw;
+    }
+
+    .dbutton, .lbutton, .pbutton {
+        border-radius: 6vw;
+        padding: 1.5vw 6vw;
+        font-size: 5.5vw;
+    }
+    
+    
+}
