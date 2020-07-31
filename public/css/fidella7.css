@@ -1,0 +1,470 @@
+
+/*TcMeet3 - tmSelect1*/
+.newEventLabel {
+    color: white;
+    font-size: 1.4vw;
+    line-height: 3.5vw;
+    font-weight: 300;
+    /*margin: 0 auto;*/
+    /* text-align: center; */
+    float: center;
+    /*margin-left: 3.5vw;*/
+    /*background-color: pink;*/
+    text-align: center;
+    margin:0 auto;
+}
+.cancelLabel {
+  color: white;
+  /*background-color: red;*/
+  position: absolute;
+  right: 2px;
+  font-size: 1.2vw;
+  line-height: 3.5vw;
+  font-weight: 300;
+  /*margin: 0 auto;*/
+  float: right;
+  text-align: right;
+  padding-right: 5px;
+}
+
+input[id="search"] {
+  width: 100%;
+  border: 0;
+  /*border-radius: 10px 10px 0 0;*/
+  padding: 2px 0 2px 1vw;
+  text-decoration: normal;
+  font-weight: 400;
+  /*margin-bottom: 5px;*/
+  font-size: calc(1vw + 2px);
+  background-color: transparent;
+  /* border-bottom: 1px solid gray; */
+}
+.ppt_table{
+  border-collapse: separate !important;
+}
+
+.ppt_table .ppt_thead th{
+  position: sticky;
+  position: -webkit-sticky;
+  border-radius: 10px 10px 0 0;
+  border: 0.1vw solid gray;
+  /* position: fixed; */
+  top: 0;
+}
+.ppt_thead, .ppt_tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.ppt_table .ppt_tbody {
+  /* height: calc((2.2vw + 6px) * 5); */
+  height: calc((2.2vw + 6px) * 5);
+  width: 100%;
+  display: block;
+  overflow-y: auto;
+
+  border-radius: 0 0 10px 10px;
+  border: 0.1vw solid gray;
+  border-top: white;
+  /* height: 5vw; */
+  /* height: calc((2vw + 7px) * 3); */
+  /* display: inline-block; */
+}
+
+/* scrollbar */
+.ppt_tbody::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.ppt_tbody::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+  padding-bottom: 1vw;
+}
+.ppt_tbody::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+
+.ppt_tbody td {
+  /*padding: 1vw;*/
+  width: 100%;
+  font-weight: bold;
+  /* line-height: 2.1vw;  /*line-height: 2vw;*/
+  line-height: calc(2.2vw + 6px);  /*line-height: 2vw;*/
+  font-size: calc(1vw + 2px);
+  /*border-bottom: 1px solid gray;*/
+  /*padding-top: 2vw;
+  vertical-align: middle;*/
+  text-align: left;
+  vertical-align: middle;
+  margin: 0 1vw;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ppt_tbody tr:hover{
+  width: 100%;
+  cursor: pointer;
+  background-color: #E6E6E6;
+  /* display: block; */
+}
+
+img.group_img {
+  width: 2vw;
+  /*float: left;*/
+  text-align: left;
+  vertical-align: middle;
+  margin: 0vw 1vw;
+  margin-bottom: 0.3vw;
+  /*margin: 4px 10px 4px 10px;*/
+  /*margin: 0.2vw 1vw;*/
+  /*margin: 2px 1vw 2px 1vw;*/
+}
+
+.table_circle {
+  width: 2vw;
+  height: 2vw;
+  background-color: #8AAAFF;
+  border-radius: 50%;
+  line-height: 2vw; /*line-height: 2vw;*/
+  font-size: 1vw;/*font-size: 0.9vw;*/
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1vw;
+  margin-bottom: 0.3vw;
+  /*margin: 4px 1vw 4px 1vw;*/
+  /*margin: 0.5vw 1vw 0.5vw 1vw;*/
+
+}
+
+
+.wrapper{
+  height:100%;
+  /* border-collapse: collapse; */
+  display: table;
+}
+.btn_styling{
+  display: table-row;
+  vertical-align: bottom;
+  height : 10px;
+
+}
+
+.create_button {
+  border: 1.5px solid #8AAAFF;
+  color: #8AAAFF;
+  /*padding: 0.1vw 1vw 0.1vw 1vw;*/
+  padding: 0.1vw 10px 0.1vw 10px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(1vw + 2px);
+  cursor: pointer;
+  background-color: white;
+  margin: 0 auto;
+  display: block;
+  /* margin-bottom: 3vh; */
+  margin-bottom: 2.5vh;
+}
+
+.next_btn {
+  /*border: 1px solid #5986FD;
+  background-color: #5986FD;*/
+  /*border: 1px solid #DDDDDD;
+  background-color: #DDDDDD;*/
+  /*box-shadow: 0 4px 15px 0 rgba(0,0,0,0.2);*/
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: calc(1vw + 2px);
+  padding: 2px 4vw 2px 4vw; /*padding-left: 4vw;*/
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.next_btn:disabled {
+  background: #DDDDDD;
+  border-color: #DDDDDD;
+  box-shadow: none;
+}
+.next_btn_enabled {
+  background: #5986FD;
+  border-color: #5986FD;
+  box-shadow: 0 4px 15px 0 rgba(0,0,0,0.2);
+}
+
+
+/*Tmselect2 - TcMeet4*/
+.circle {
+  width: 2.65vw;
+  height: 2.65vw;
+  border-radius: 50%;
+  line-height: 2.6vw;
+  font-size: 1vw;
+  color: white;
+  font-weight: 300;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  background: #5986FD;
+  float: left;
+  margin: 0vw 0.8vw 0.8vw 0;
+
+  position: relative;
+}
+
+.group {
+  width: 2.65vw;
+  display: table-cell;
+  float: left;
+  margin: 0 0.8vw 0.4vw 0;
+}
+
+.minus {
+  /*width: 15px; /*1.5vw;*/
+  width: calc(1vw + 2px);
+  height: calc(1vw + 2px);
+  border-radius: 50%;
+  line-height: 0.9vw;
+  font-size: 1vw;
+  color: red;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  background: white;
+  border: 0.1vw solid gray;
+  /*margin-left: 25px;
+  margin-top: -37px;*/
+  /* margin: -2.8vw 0 0 1.8vw; */
+
+  position: absolute;
+  top: -0.3vw;
+  left: 1.7vw;
+}
+.minus:hover{
+  cursor: pointer;
+}
+
+.ppt{
+  display: inline-block;
+  width: 100%;
+  /*margin-top: 3px;*/
+  /* z-index: 500; */
+  /*padding-bottom: 1vw;*/
+}
+
+.border {
+  border-bottom: 1px solid lightgray;
+}
+
+
+/*TcMeet2 - tmConfirm*/
+
+#questions, #ppt_lbl{
+  font-size: calc(0.9vw + 1px);
+  color: #828282;
+  margin: 0;
+  /* padding-top: 2px; */
+}
+
+input[id="event_title"] {
+  /*width: 100%;*/
+  margin: 0;
+  background-color: white;
+  outline: none;
+  padding-left: 5px;
+  border: 0;
+  border-bottom: 1px solid #5986FD;
+  width: 100%;
+  margin-bottom: 1vh;
+  color: black;
+}
+
+.time_label {
+  font-weight: normal !important;
+  color: black;
+}
+
+.time_select{
+  margin-bottom: 1vh;
+  color: black;
+  text-align: center;
+}
+
+.choose_date {
+  text-align: center;
+  color: black;
+}
+input[id="first_date"], input[id="second_date"] {
+  /*width: 100%;*/
+  margin: 0;
+  background-color: white;
+  padding-left: 0.2vw;
+  border: 0;
+  border-bottom: 1px solid #5986FD;
+  width: calc(30% + 10px);
+  /*font-size: calc(0.8vw + 1px);*/
+  margin-bottom: 5px;
+  color: black;
+}
+.ui-datepicker tbody td {
+  font-size: calc(0.6vw + 5px);
+  line-height: calc(1.2vw + 8px);
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+  cursor: pointer;
+}
+.ui-datepicker td a:hover {
+  /*background-color: lightblue;*/
+  border-color: #5986FD !important;
+}
+.ui-datepicker-calendar .ui-state-active {
+  background: #5986FD !important;  change color
+  color: white;
+}
+.ui-datepicker-calendar .ui-state-highlight {
+  background: #8AAAFF !important;
+  border-color: #5986FD !important;
+  color: white !important;
+}
+
+
+#notes { /*textarea*/
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #5986FD;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 7px;
+  margin: 0 0 1vh 0;
+  resize: none;
+  color: black;
+}
+
+input[id="submit"] {
+  background-color: #5986FD;
+  border: 0.5px solid #5986FD;
+  color: white;
+  border-radius: 20px;
+  padding: 0 2vw 0 2vw;
+  text-align: center;
+  font-size: calc(1vw + 2px);
+  padding: 0.3vw 2vw 0.3vw 2vw; /*padding-left: 4vw;*/
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  display: none;
+}
+
+.subm {
+  margin-top: 1vw;
+  text-align: center;
+}
+
+/*style for phones*/
+@media (max-width: 480px) {
+  .newEventLabel {
+      font-size: 5.5vw;
+      line-height: 15vw;
+  }
+  .cancelLabel {
+    font-size: 4vw;
+    line-height: 15vw;
+  }
+  input[id="search"] {
+    font-size: calc(2.1vmax + 6px);
+    padding-left: 3vw;
+  }
+  .ppt_tbody td{
+    /* font-size: 4.4vw; */
+    font-size: calc(4vmin + 4px);
+    /* line-height: 6vh; */
+    /*margin: 0 3vw;*/
+    vertical-align: middle;
+  }
+  .ppt_table tr{
+    vertical-align: middle;
+  }
+  .ppt_table .ppt_tbody {
+    max-height: calc(11vw * 5);
+    height: calc(6.6vh * 5);
+    /* max-height: calc(12vw); */
+  }
+  .ppt_tbody::-webkit-scrollbar {
+    width: 1.5vw;
+    background-color: transparent;
+  }
+  .circle {
+    /*background-color: red;*/
+    width: 11vw;
+    height: 11vw;
+    line-height: 11.5vw;
+    font-size: 4vw;
+    text-align: center;
+    margin: 0vw 3.5vw 3vw 0;
+  }
+  .group {
+    width: 11vw;
+    margin: 0vw 3.5vw 3vw 0;
+  }
+  .minus {
+    width: 5vw;
+    height: 5vw;
+    line-height: 4.5vw;
+    font-size: 4vw;
+    /* margin: -13vw 0 0 8vw; */
+
+    top: -0.7vw;
+    left: 7.7vw;
+  }
+  .table_circle {
+    /* background-color: red;  */
+    width: 9vw;
+    height: 9vw;
+    line-height: 9vw;
+    font-size: 3.7vw;
+    margin: 1vw 3vw;
+    display: inline-block;
+    /* margin: 4px 3vw 4px 3vw; */
+  }
+  img.group_img {
+    width: 9vw;
+    height: auto;
+    vertical-align: middle;
+    margin: 1vw 3vw;
+  }
+  .btn_styling {
+    bottom: 0vh;
+  }
+  .create_button {
+    font-size: calc(2.6vh + 2px);
+    margin-bottom: 3.5vh;
+  }
+  .next_btn {
+    font-size: calc(3vh + 3px);
+    padding: 2px 18vw 2px 18vw;
+  }
+  #questions, #ppt_lbl{
+    font-size: 4vw;
+    margin: 0;
+  }
+  input[id="submit"] {
+    font-size: 5vw;
+  }
+  .subm {
+    margin-top: 10vw;
+    text-align: center;
+  }
+  .ui-datepicker tbody td {
+    font-size: 3.8vw;
+    line-height: 6vw;
+  }
+}

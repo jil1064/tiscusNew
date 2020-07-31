@@ -6,6 +6,16 @@ $(document).ready(function () {
     initCreateTc();
 });
 
+    function pageTransition(x, y, z) {
+      $(x).click(function(){
+          //alert("called");
+          $(y).fadeOut();
+          $(z).fadeIn();
+      });
+    }
+
+    pageTransition('#select_next', '.selectPage', '.tmConfirm');
+
 $('.timeSlot').click(function () {
     var y = $(this).position().top;
     var yy = Math.floor(y + 115).toString() + 'px';
@@ -211,7 +221,6 @@ $('#notiBell').click(function () {
 });
 
 function initCreateTc() {
-    alert("testing");
     // add your code here
     $('#tcForm').submit(function (e) {
         alert('sendInvi');
