@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 
 //参与者列表
 const participants = Schema({
-    userID: {type: Number},
+    //这里为了配合前端传输的数据临时改为String，需要改为Number
+    userID: {type: String},
     status: {type: String, default: 'pending'}
 });
 //时间列表

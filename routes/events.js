@@ -7,7 +7,7 @@ const data = {
 };
 /**
  * 测试添加事件方法
- * @author FengXuan
+ * @author 风灵玄
  * @version 0.1
  * @ignore 创建时间 2020年7月26日
  * @ignore 上次修改时间 2020年7月26日
@@ -49,24 +49,34 @@ router.post('/test', (request, response) => {
 });
 /**
  * 提交表单事件
- * @author
- * @version 0.1
+ * @author 风灵玄
+ * @version 0.2
  * @ignore 创建时间 2020年7月26日
- * @ignore 上次修改时间 2020年7月26日
+ * @ignore 上次修改时间 2020年8月1日
  */
 router.post('/submitTc', (request, response) => {
-    //获得tcTitle数据
+    //标题
     let tcTitle = request.body.tcTitle;
+    //说明
     let tcNotes = request.body.tcNotes;
+    //持续时长
     let tcDuration = request.body.tcDuration;
+    //时间约束
+    let tcConstraint=request.body.tcConstraint;
+    //用户列表(数组形式)
     let tcUsers = request.body.tcUsers.split(',');
     let creatorId = "1000001";
+    let tcUsersArr= [];
+    for (let tcUser of tcUsers) {
+        tcUsersArr.unshift({userID:tcUser});
+    }
     let events = new Events({
         creatorId: creatorId,
         title: tcTitle,
         notes: tcNotes,
+        constraint:tcConstraint,
         duration: tcDuration,
-        participants: tcUsers,
+        participants: tcUsersArr,
     });
     events.save(function (error, result) {
         let msg = "数据插入成功";
@@ -81,6 +91,7 @@ router.post('/submitTc', (request, response) => {
         });
     });
 });
+
 
 //暴露路由
 module.exports = router;
