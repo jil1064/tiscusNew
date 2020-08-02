@@ -3,7 +3,7 @@
 .newEventLabel {
     color: white;
     font-size: 1.4vw;
-    line-height: 3.5vw;
+    line-height: 0.5vw;
     font-weight: 300;
     /*margin: 0 auto;*/
     /* text-align: center; */
@@ -274,7 +274,7 @@ img.group_img {
   /* padding-top: 2px; */
 }
 
-input[id="event_title"] {
+input[id="tcTitle"] {
   /*width: 100%;*/
   margin: 0;
   background-color: white;
@@ -336,7 +336,7 @@ input[id="first_date"], input[id="second_date"] {
 }
 
 
-#notes { /*textarea*/
+#tcNotes { /*textarea*/
   border-radius: 10px 10px 0px 0px;
   border: 1px solid #5986FD;
   width: 100%;
@@ -373,7 +373,7 @@ input[id="submit"] {
 @media (max-width: 480px) {
   .newEventLabel {
       font-size: 5.5vw;
-      line-height: 15vw;
+      line-height: 5vw;
   }
   .cancelLabel {
     font-size: 4vw;

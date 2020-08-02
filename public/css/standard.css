@@ -2,8 +2,8 @@
 
 .title {
     font-family: 'Roboto';
-    color: white; 
-    margin-top: .7vw; 
+    color: white;
+    margin-top: .7vw;
     font-size: 1.5vw;
     font-weight: 400;
 }
@@ -34,7 +34,7 @@
     display: inline-block;
     background-color: #5986FD;
     width: 100%;
-    height: 3.5vw; 
+    height: 3.5vw;
 }
 
 #ok, #setting {
@@ -49,14 +49,25 @@
     top: 0;
 }
 
+/*Problematic*/
 .info {
+    position: absolute;
+    top: 3.5vw;
+    height: calc(11.5vw + 260px);
+    width: 100%;
+    padding: 1.3vw 2.2vw;
+    overflow: scroll;
+    /*padding-top: 1vw;*/
+}
+
+/*.info {
     position: absolute;
     top: 3.5vw;
     height: calc(11.5vw + 260px);
     width: 100%;
     padding: 0.1vw 2.2vw;
     overflow: scroll;
-}
+}*/
 
 /*elements*/
 
@@ -138,20 +149,20 @@
 
     /*fonts*/
     .title {
-        margin-top: 2.5vw; 
+        margin-top: 2.5vw;
         font-size: 7vw;
     }
-    
+
     .labelt, .normalt, .nonimpt {
         font-size: 5.5vw;
     }
-    
+
     /*layouts*/
-    
+
     .editBar, .genBar {
         height: 15vw;
     }
-    
+
     #ok, #setting {
         top: 1vh;
     }
@@ -159,21 +170,29 @@
     #back {
         top: 1vh;
     }
-    
+
+/*Problematic*/
     .info {
+        top: 15vw;
+        /*margin-top: 4vw;*/
+        height: 90vh;
+        padding: 4vw 10vw;
+    }
+
+    /*.info {
         top: 15vw;
         height: 90vh;
         padding: 0 10vw;
-    }
-    
+    }*/
+
     /*elements*/
-    
+
     .circle {
         width: 16vw;
         height: 16vw;
         margin: 0 1vw;
     }
-    
+
     .icon, .icon2 {
         width: 12vw;
     }
@@ -183,6 +202,6 @@
         padding: 1.5vw 6vw;
         font-size: 5.5vw;
     }
-    
-    
+
+
 }

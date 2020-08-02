@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(".welcome").fadeIn(1000);
     $(".welcome").delay(1000);
     $(".welcome").fadeOut(1000);
-    initCreateTc();
+//    initCreateTc();
 });
 
     function pageTransition(x, y, z) {
@@ -219,35 +219,3 @@ $('#meetChoose').click(function () {
 $('#notiBell').click(function () {
     $('.notifyPage').fadeIn();
 });
-
-function initCreateTc() {
-    // add your code here
-    $('#tcForm').submit(function (e) {
-        alert('sendInvi');
-        e.preventDefault();
-        console.log("submit form...");
-        let tcTitle = $('#tcTitle').val();
-        let tcNotes=$('#tcNotes').val();
-        let tcDuration=$('#tcDuration').val();
-        var tcUsers=[];
-        $('#resultInfo a').each(function () {
-            console.log(this.id);
-            tcUsers.unshift(this.id);
-        })
-        // $.post('events/submitTc', {tcTitle: tcTitle}, postCallback);
-        $.ajax({
-            url: 'events/submitTc',
-            type: 'post',
-            data: {tcTitle:tcTitle,tcNotes:tcNotes,tcDuration:tcDuration,tcUsers:tcUsers.toString()},
-            success:function (data) {
-                postCallback(data);
-            }
-        });
-    });
-
-    function postCallback(res) {
-        alert("RSVP form successfully submitted");
-        $('#tcTitle').val('');
-        console.log(res)
-    }
-}
