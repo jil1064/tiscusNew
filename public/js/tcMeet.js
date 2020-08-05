@@ -265,17 +265,18 @@ function initCreateTc() {
         console.log("submit form...");
         let tcTitle = $('#tcTitle').val();
         let tcNotes=$('#tcNotes').val();
-        let tcDuration=$('#tcDuration').val();
-        var tcUsers=[];
-        $('#resultInfo a').each(function () {
+        let tcDuration=$('#hr').val()+":"+$('#min').val();
+        let tcConstraint=$('#first_date').val()+'-'+$('#second_date').val();
+        let tcUsers=[];
+        $('.confirm_ppt>.ppt div').each(function () {
             console.log(this.id);
-            tcUsers.unshift(this.id);
+            tcUsers.unshift(this.id.replace('\n',''));
         })
         // $.post('events/submitTc', {tcTitle: tcTitle}, postCallback);
         $.ajax({
             url: 'events/submitTc',
             type: 'post',
-            data: {tcTitle:tcTitle,tcNotes:tcNotes,tcDuration:tcDuration,tcUsers:tcUsers.toString()},
+            data: {tcTitle:tcTitle,tcNotes:tcNotes,tcDuration:tcDuration,tcConstraint:tcConstraint,tcUsers:tcUsers.toString()},
             success:function (data) {
                 postCallback(data);
             }

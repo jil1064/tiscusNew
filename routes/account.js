@@ -43,5 +43,23 @@ router.post('/register', (request, response) => {
     })
     user = null;
 })
+
+/**
+ * 查询用户信息
+ * @author 风灵玄
+ * @version 0.1
+ * @ignore 创建时间 2020年08月05日
+ */
+router.get('/selectUsers',(request,response)=>{
+    let users=Users.find();
+    users.select('userID userName email');
+    users.exec(function (error, result) {
+        response.json({
+            error: error,
+            result: result
+        });
+    });
+})
+
 //暴露路由
 module.exports = router;
