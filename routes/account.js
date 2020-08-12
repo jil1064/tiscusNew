@@ -54,10 +54,7 @@ router.get('/selectUsers',(request,response)=>{
     let users=Users.find();
     users.select('userID userName email');
     users.exec(function (error, result) {
-        response.json({
-            error: error,
-            result: result
-        });
+        response.json(result);
     });
 })
 

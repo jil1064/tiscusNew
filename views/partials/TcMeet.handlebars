@@ -2,10 +2,11 @@
 <link href="/css/fidella7.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="https://twitter.github.io/typeahead.js/css/main.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typeahead.js@0.11.1/dist/typeahead.jquery.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/typeahead.js@0.11.1/dist/typeahead.bundle.min.js"></script>
+<script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
 <!--
 <div class='meetPage page leftPage text'>
     <div class='genBar'>
@@ -87,115 +88,126 @@
 -->
 
 <div class='selectPage page leftPage text' style="display: inline-block;">
-      <div class='genBar'>
-          <button><img class='icon' id='back' src='img/back.png'></button>
-          <p class="newEventLabel">New Event</p>
-          <!--<button id='createMeet'>+</button>-->
-      </div>
-      <div class='info'>
+    <div class='genBar'>
+        <button><img class='icon' id='back' src='img/back.png'></button>
+        <p class="newEventLabel">New Event</p>
+        <!--<button id='createMeet'>+</button>-->
+    </div>
+    <div class='info'>
         <div class="wrapper">
-          <div class="ppt" style="display: none">
+            <div class="ppt" style="display: none">
 
-          </div>
-          <div class="border" style="display: none">
-          </div>
-          <table class="ppt_table">
-              <thead class="ppt_thead">
-                <tr>
-                  <th><input type="text" id="search" placeholder="Schedule with:" onkeyup="searchPpt()"></th>
-                </tr>
-              </thead>
-              <tbody class="ppt_tbody">
-                <tr>
-                  <td><img class="group_img" src="img/groupImg.png">Study Group
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="table_circle">CL</span>Crystal Lu
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="table_circle">JB</span>James Bieber
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="table_circle">AK</span>Amy Kenn
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="table_circle">JB</span>James Bieber
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="table_circle">CL</span>Crystal Lu
-                  </td>
-                </tr>
-              </tbody>
-            </table><br><br>
-        <div class="btn_styling">
-            <button class="create_button">Create a Group</button>
-            <button class="next_btn" id="select_next" disabled>Next</button>
+            </div>
+            <div class="border" style="display: none">
+            </div>
+
+            <div id="ajax-prefetch-example">
+                <div class="Typeahead Typeahead--twitterUsers">
+                    <div class="u-posRelative">
+                        <input class="Typeahead-hint" type="text" tabindex="-1" readonly>
+                        <input class="Typeahead-input" id="demo-input" type="text" name="q"
+                               placeholder="Search Twitter users...">
+                    </div>
+                    <div class="Typeahead-menu"></div>
+                </div>
+            </div>
+            <!--            <table class="ppt_table">-->
+            <!--                <thead class="ppt_thead">-->
+            <!--                <tr>-->
+            <!--                    <th><input type="text" id="search" placeholder="Schedule with:" onkeyup="searchPpt()"></th>-->
+            <!--                </tr>-->
+            <!--                </thead>-->
+            <!--                <tbody class="ppt_tbody">-->
+            <!--                <tr>-->
+            <!--                    <td><img class="group_img" src="img/groupImg.png">Study Group-->
+            <!--                    </td>-->
+            <!--                </tr>-->
+            <!--                <tr>-->
+            <!--                    <td><span class="table_circle">CL</span>Crystal Lu-->
+            <!--                    </td>-->
+            <!--                </tr>-->
+            <!--                <tr>-->
+            <!--                    <td><span class="table_circle">JB</span>James Bieber-->
+            <!--                    </td>-->
+            <!--                </tr>-->
+            <!--                <tr>-->
+            <!--                    <td><span class="table_circle">AK</span>Amy Kenn-->
+            <!--                    </td>-->
+            <!--                </tr>-->
+            <!--                <tr>-->
+            <!--                    <td><span class="table_circle">JB</span>James Bieber-->
+            <!--                    </td>-->
+            <!--                </tr>-->
+            <!--                <tr>-->
+            <!--                    <td><span class="table_circle">CL</span>Crystal Lu-->
+            <!--                    </td>-->
+            <!--                </tr>-->
+            <!--                </tbody>-->
+            <!--            </table>-->
+            <div class="btn_styling">
+                <button class="create_button">Create a Group</button>
+                <button class="next_btn" id="select_next" disabled>Next</button>
+            </div>
         </div>
     </div>
-    </div>
-  </div>
-
+</div>
 
 
 <div class='tmConfirm page leftPage text' style="display: none;">
-  <div class='genBar' style="clear: both;">
-      <button><img class='icon' id='back' src='img/back.png'></button>
-      <a class="cancelLabel">Cancel</a>
-      <p class="newEventLabel">New Event</p>
-  </div>
-  <div class="info">
-    <p id="ppt_lbl">Participants</p>
-    <div class="confirm_ppt">
-        <!--<div class="circle">JB</div>
-        <div class="circle">CL</div>
-        <div class="circle">CL</div>
-        <div class="circle">CL</div>
-        <div class="circle">CL</div>-->
+    <div class='genBar' style="clear: both;">
+        <button><img class='icon' id='back' src='img/back.png'></button>
+        <a class="cancelLabel">Cancel</a>
+        <p class="newEventLabel">New Event</p>
     </div>
-    <form id="tcForm" oninput="validate()">
-      Event Title*<br>
-      <input type="text" id="tcTitle" name="event"><br>
-      How long would you like to meet?*<br>
-      <div class="time_select">
-        <select name="hr" id="hr">
-          <option style="display:none;"></option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <label for="hr" class="time_label">Hr&nbsp;</label>
-        <select name="min" id="min">
-          <option style="display:none;"></option>
-          <option value="00">00</option>
-          <option value="15">15</option>
-          <option value="30">30</option>
-          <option value="45">45</option>
-        </select>
-        <label for="min" class="time_label">Min</label><br>
-      </div>
-      Any constraint?* (3-day default)<br>
-      <div class="choose_date">
-        <input type="text" id="first_date" name="first_date" placeholder="m/d/yyyy" readonly>
-        <p style="display: inline;"> - </p>
-        <input type="text" id="second_date" placeholder="m/d/yyyy" readonly>
-      </div>
-      Notes<br>
-      <!-- <input type="text" id="notes" name="notes"><br> -->
-      <textarea type="text" id="tcNotes" name="notes" maxlength="20"></textarea><br> <!--about 26 per line, so 50ish-->
-      <!-- <div id="notes" name="notes" contentEditable="true" maxlength="5"></div> -->
-      <div class="subm">
-        <input type="submit" id="submit" value="Send Invites">
-      </div>
-    </form>
-  </div>
+    <div class="info">
+        <p id="ppt_lbl">Participants</p>
+        <div class="confirm_ppt">
+            <!--<div class="circle">JB</div>
+            <div class="circle">CL</div>
+            <div class="circle">CL</div>
+            <div class="circle">CL</div>
+            <div class="circle">CL</div>-->
+        </div>
+        <form id="tcForm" oninput="validate()">
+            Event Title*<br>
+            <input type="text" id="tcTitle" name="event"><br>
+            How long would you like to meet?*<br>
+            <div class="time_select">
+                <select name="hr" id="hr">
+                    <option style="display:none;"></option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="hr" class="time_label">Hr&nbsp;</label>
+                <select name="min" id="min">
+                    <option style="display:none;"></option>
+                    <option value="00">00</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                </select>
+                <label for="min" class="time_label">Min</label><br>
+            </div>
+            Any constraint?* (3-day default)<br>
+            <div class="choose_date">
+                <input type="text" id="first_date" name="first_date" placeholder="m/d/yyyy" readonly>
+                <p style="display: inline;"> - </p>
+                <input type="text" id="second_date" placeholder="m/d/yyyy" readonly>
+            </div>
+            Notes<br>
+            <!-- <input type="text" id="notes" name="notes"><br> -->
+            <textarea type="text" id="tcNotes" name="notes" maxlength="20"></textarea><br>
+            <!--about 26 per line, so 50ish-->
+            <!-- <div id="notes" name="notes" contentEditable="true" maxlength="5"></div> -->
+            <div class="subm">
+                <input type="submit" id="submit" value="Send Invites">
+            </div>
+        </form>
+    </div>
 </div>
 
 
@@ -219,7 +231,9 @@
         <div style='text-align: center;'>
             <button id='createGroup'>create a new group</button>
             <p><input id='newGroupName' type='text' placeholder="the new group's name"></p>
-            <p><button id='submitGroup' style='display: none;'>submit</button></p>
+            <p>
+                <button id='submitGroup' style='display: none;'>submit</button>
+            </p>
             <button><img class='icon' id='meetNext' src='img/next.png'></button>
         </div>
     </div>
@@ -247,9 +261,25 @@
         </div>
     </div>
 </div>
+<script id="result-template" type="text/x-handlebars-template">
+      <div class="ProfileCard u-cf">
+        <div class="ProfileCard-details">
+          <div class="ProfileCard-realName">{{userName}}</div>
+        </div>
+      </div>
+
+</script>
+
+<script id="empty-template" type="text/x-handlebars-template">
+    <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+</script>
+
+
 
 
 <script src="/js/messy.js"></script>
 
 <script src="/js/tcMeet.js"></script>
+<!--用于typeahead初始化-->
+<script src="/js/userSelect.js"></script>
 
