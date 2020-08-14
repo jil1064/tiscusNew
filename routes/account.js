@@ -51,7 +51,13 @@ router.post('/register', (request, response) => {
  * @ignore 创建时间 2020年08月05日
  */
 router.get('/selectUsers',(request,response)=>{
-    let users=Users.find();
+    let {queryConditions}=request.query;
+    let users;
+    if (queryConditions!==undefined&&queryConditions.length>1){
+        users=Users.find().regex('userName',queryConditions)
+    }else{
+        users=Users.find();
+    }
     users.select('userID userName email');
     users.exec(function (error, result) {
         response.json(result);

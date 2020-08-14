@@ -4,8 +4,8 @@ $(document).ready(function () {
     $.support.cors = false;
 
     remoteHost = 'http://localhost:3000';
-    template = Handlebars.compile($("#result-template").html());
-    empty = Handlebars.compile($("#empty-template").html());
+    template = Handlebars.compile($("#tcSearchResult").html());
+    empty = Handlebars.compile($("#tcEmptyResult").html());
 
     engine = new Bloodhound({
         identify: function (o) {
@@ -16,26 +16,27 @@ $(document).ready(function () {
         // datumTokenizer:Bloodhound.tokenizers.whitespace,
         prefetch: remoteHost + '/account/selectUsers',
         remote: {
-            url: remoteHost + '/account/selectUsers?q=%QUERY',
+            url: remoteHost + '/account/selectUsers?queryConditions=%QUERY',
             wildcard: '%QUERY'
         }
     });
 
     // ensure default users are read on initialization
-    console.log(engine.get([1000000, 1000001]))
+    // 读取默认用户要改成读取默认组，可能不需要用typeahead来写
 
     function engineWithDefaults(q, sync, async) {
-        if (q === '') {
-            sync(engine.get(1000000, 1000001, 1000005, 1000057));
+        if (q.length<=0) {
+            sync(engine.all());
             async([]);
         } else {
             engine.search(q, sync, async)
+
         }
     }
 
-    $('#demo-input').typeahead({
-        hint: $('.Typeahead-hint'),
-        menu: $('.Typeahead-menu'),
+    $('#tcSearch').typeahead({
+        hint: false,
+        menu: $('.ppt_tbody'),
         minLength: 0,
         classNames: {
             open: 'is-open',
@@ -45,6 +46,7 @@ $(document).ready(function () {
             selectable: 'Typeahead-selectable'
         }
     }, {
+        limit:100,
         source: engineWithDefaults,
         displayKey: 'userName',
         templates: {
@@ -52,8 +54,8 @@ $(document).ready(function () {
             empty: empty
         }
     }).on('typeahead:asyncrequest', function () {
-            $('.Typeahead-spinner').show();
-        })
+        $('.Typeahead-spinner').show();
+    })
         .on('typeahead:asynccancel typeahead:asyncreceive', function () {
             $('.Typeahead-spinner').hide();
         });

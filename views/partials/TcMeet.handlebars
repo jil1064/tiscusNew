@@ -2,17 +2,18 @@
 <link href="/css/fidella7.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.css">
-<link rel="stylesheet" href="https://twitter.github.io/typeahead.js/css/main.css">
+<!--<link rel="stylesheet" href="https://twitter.github.io/typeahead.js/css/main.css">-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typeahead.js@0.11.1/dist/typeahead.bundle.min.js"></script>
 <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+
 <!--
 <div class='meetPage page leftPage text'>
     <div class='genBar'>
         <button><img class='icon' id='back' src='img/back.png'></button>
         <button id='createMeet'>+</button>
-    </div> 
+    </div>
     <div class='info' style='text-align: center; padding: 0;'>
 
         <button data-toggle="modal" data-target="#waitModal">
@@ -23,13 +24,13 @@
         <button><div class="meetCard done"><span style="font-family: 'Arial';">9/21 - SCF meeting</span><br>
             @Someone's apt<br>
             Sat 7:00pm-8:00pm</div></button>
-    </div>  
-</div>    
+    </div>
+</div>
 
 <div class='createMeetPage page leftPage text'>
     <div class='genBar'>
         <button><img class='icon' id='back' src='img/back.png'></button>
-    </div> 
+    </div>
     <div class='info meetStep1'>
         <input id='tcSearch' type='search' placeholder='who? group/user(s)' style='position: absolute; width: 80%;'>
               {{#each possibleriends}}
@@ -58,7 +59,7 @@
             <p><button id='submitGroup' style='display: none;'>submit</button></p>
             <button><img class='icon' id='meetNext' src='img/next.png'></button>
         </div>
-    </div>  
+    </div>
     <div class='info meetStep2' style='display: none;'>
         <br>
         <form id='tcForm'>
@@ -77,14 +78,14 @@
             <br><input type='time' onfocus="(this.type='time')" onblur="(this.type='text')" placeholder='9:00 AM'>
             <br>to
             <br><input type='time' onfocus="(this.type='time')" onblur="(this.type='text')" placeholder='9:00 PM'>
-        </p>                       
+        </p>
         <br><br>
         <div style='text-align: center;'>
             <button id='sendInvi' type='submit'>Tc Them!</button>
         </div>
         </form>
-    </div>            
-</div> 
+    </div>
+</div>
 -->
 
 <div class='selectPage page leftPage text' style="display: inline-block;">
@@ -100,50 +101,43 @@
             </div>
             <div class="border" style="display: none">
             </div>
+            <table class="ppt_table">
+                <thead class="ppt_thead">
+                <tr>
+                    <!--                    <th><input type="text" id="tcSearch" placeholder="Schedule with:" onkeyup="searchPpt()"></th>-->
+                    <th><input type="text" id="tcSearch"  placeholder="Schedule with:"></th>
 
-            <div id="ajax-prefetch-example">
-                <div class="Typeahead Typeahead--twitterUsers">
-                    <div class="u-posRelative">
-                        <input class="Typeahead-hint" type="text" tabindex="-1" readonly>
-                        <input class="Typeahead-input" id="demo-input" type="text" name="q"
-                               placeholder="Search Twitter users...">
-                    </div>
-                    <div class="Typeahead-menu"></div>
-                </div>
-            </div>
-            <!--            <table class="ppt_table">-->
-            <!--                <thead class="ppt_thead">-->
-            <!--                <tr>-->
-            <!--                    <th><input type="text" id="search" placeholder="Schedule with:" onkeyup="searchPpt()"></th>-->
-            <!--                </tr>-->
-            <!--                </thead>-->
-            <!--                <tbody class="ppt_tbody">-->
-            <!--                <tr>-->
-            <!--                    <td><img class="group_img" src="img/groupImg.png">Study Group-->
-            <!--                    </td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <td><span class="table_circle">CL</span>Crystal Lu-->
-            <!--                    </td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <td><span class="table_circle">JB</span>James Bieber-->
-            <!--                    </td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <td><span class="table_circle">AK</span>Amy Kenn-->
-            <!--                    </td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <td><span class="table_circle">JB</span>James Bieber-->
-            <!--                    </td>-->
-            <!--                </tr>-->
-            <!--                <tr>-->
-            <!--                    <td><span class="table_circle">CL</span>Crystal Lu-->
-            <!--                    </td>-->
-            <!--                </tr>-->
-            <!--                </tbody>-->
-            <!--            </table>-->
+                </tr>
+                </thead>
+                <tbody class="ppt_tbody">
+<!--                <tr>-->
+<!--                    <td class='defaultTd'><img class="group_img" src="img/groupImg.png">Study Group-->
+<!--                    </td>-->
+<!--                </tr>-->
+
+                <!--                <tr>-->
+                <!--                    <td class='resultTd'><div class="table_circle">CL</div>Crystal Lu<div class='table_email'>abcdefg@ucsd.edu</div>-->
+                <!--                    </td>-->
+                <!--                </tr>-->
+                <!--                <tr>-->
+                <!--                    <td class='resultTd'><div class="table_circle">JB</div>James Bieber<div class='table_email'>abcdefg@ucsd.edu</div>-->
+                <!--                    </td>-->
+                <!--                </tr>-->
+                <!--                <tr>-->
+                <!--                    <td class='resultTd'><div class="table_circle">AK</div>Amy Kenn<div class='table_email'>abcdefg@ucsd.edu</div>-->
+                <!--                    </td>-->
+                <!--                </tr>-->
+                <!--                <tr>-->
+                <!--                    <td class='resultTd'><div class="table_circle">JB</div>James Bieber<div class='table_email'>abcdefg@ucsd.edu</div>-->
+                <!--                    </td>-->
+                <!--                </tr>-->
+                <!--                <tr>-->
+                <!--                    <td class='resultTd'><div class="table_circle">CL</div>Crystal Lu<div class='table_email'>abcdefg@ucsd.edu</div>-->
+                <!--                    </td>-->
+                <!--                </tr>-->
+                </tbody>
+            </table>
+            <br><br>
             <div class="btn_styling">
                 <button class="create_button">Create a Group</button>
                 <button class="next_btn" id="select_next" disabled>Next</button>
@@ -210,76 +204,28 @@
     </div>
 </div>
 
-
-<div class='createMeetPage page leftPage text'>
-    <div class='genBar'>
-        <button><img class='icon' id='back' src='img/back.png'></button>
-    </div>
-    <div class='info meetStep1'>
-        <input id='tcSearch' type='search' placeholder='who? group/user(s)' style='position: absolute; width: 80%;'>
-        <div id='searchResult'><br>search result<br>(Imagine you have clicked 2 users and 2 groups)</div>
-        <br><br>
-        <div id='resultInfo' style='display: none;'>
-            <a href='#'><img class='profilePicMeet' src='img/profile.png'></a>
-            <a href='#'><img class='profilePicMeet' src='img/profile.png'></a>
-            <div class='meetGroups'>
-                <button class='meetGroupCard'>UCSD SCF</button>
-                <button class='meetGroupCard'>DSGN 1 Proj#1</button>
-            </div>
-        </div>
-        <br>
-        <div style='text-align: center;'>
-            <button id='createGroup'>create a new group</button>
-            <p><input id='newGroupName' type='text' placeholder="the new group's name"></p>
-            <p>
-                <button id='submitGroup' style='display: none;'>submit</button>
-            </p>
-            <button><img class='icon' id='meetNext' src='img/next.png'></button>
-        </div>
-    </div>
-    <div class='info meetStep2' style='display: none;'>
-        <br>
-        <input type='text' placeholder='Event Title'>
-        <br>
-        <input type='text' placeholder='notes (optional)'>
-        <br>
-        <input type='number' placeholder='how many minutes?'>
-        <br><br>
-        <p>Date Range (optional)
-            <br><input type='date' onfocus="(this.type='date')" onblur="(this.type='text')" placeholder='06/27/2019'>
-            <br>to
-            <br><input type='date' onfocus="(this.type='date')" onblur="(this.type='text')" placeholder='07/27/2019'>
-        </p><br>
-        <p>Time Range (optional)
-            <br><input type='time' onfocus="(this.type='time')" onblur="(this.type='text')" placeholder='9:00 AM'>
-            <br>to
-            <br><input type='time' onfocus="(this.type='time')" onblur="(this.type='text')" placeholder='9:00 PM'>
-        </p>
-        <br><br>
-        <div style='text-align: center;'>
-            <button id='sendInvi'>Tc Them!</button>
-        </div>
-    </div>
-</div>
-<script id="result-template" type="text/x-handlebars-template">
-      <div class="ProfileCard u-cf">
-        <div class="ProfileCard-details">
-          <div class="ProfileCard-realName">{{userName}}</div>
-        </div>
-      </div>
+<script id="tcEmptyResult" type="text/x-handlebars-template">
+    <tr>
+        <td class='defaultTd'><img class="group_img" src="img/groupImg.png">{{groupName}}
+    </td>
+</tr>
 
 </script>
 
-<script id="empty-template" type="text/x-handlebars-template">
-    <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+<script id="tcSearchResult" type="text/x-handlebars-template">
+<tr>
+    <td class='resultTd'>
+        <div class="table_circle" style="background-image: url(\{{imgUrl}});"></div>
+        <span>\{{userName}}</span>
+        <div class='table_email'>\{{email}}</div>
+    </td>
+</tr>
+
 </script>
-
-
 
 
 <script src="/js/messy.js"></script>
 
 <script src="/js/tcMeet.js"></script>
-<!--用于typeahead初始化-->
-<script src="/js/userSelect.js"></script>
 
+<script src="/js/userSelect.js"></script>

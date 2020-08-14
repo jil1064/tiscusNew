@@ -1,17 +1,17 @@
 
 /*TcMeet3 - tmSelect1*/
 .newEventLabel {
-    color: white;
-    font-size: 1.4vw;
-    line-height: 0.5vw;
-    font-weight: 300;
-    /*margin: 0 auto;*/
-    /* text-align: center; */
-    float: center;
-    /*margin-left: 3.5vw;*/
-    /*background-color: pink;*/
-    text-align: center;
-    margin:0 auto;
+  color: white;
+  font-size: 1.4vw;
+  line-height: 0.5vw;
+  font-weight: 300;
+  /*margin: 0 auto;*/
+  /* text-align: center; */
+  float: center;
+  /*margin-left: 3.5vw;*/
+  /*background-color: pink;*/
+  text-align: center;
+  margin:0 auto;
 }
 .cancelLabel {
   color: white;
@@ -27,12 +27,12 @@
   padding-right: 5px;
 }
 
-input[id="search"] {
+input[id="tcSearch"] {
   width: 100%;
   border: 0;
   /*border-radius: 10px 10px 0 0;*/
   padding: 2px 0 2px 1vw;
-  text-decoration: normal;
+  text-decoration:normal;
   font-weight: 400;
   /*margin-bottom: 5px;*/
   font-size: calc(1vw + 2px);
@@ -52,9 +52,9 @@ input[id="search"] {
   top: 0;
 }
 .ppt_thead, .ppt_tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .ppt_table .ppt_tbody {
@@ -85,7 +85,7 @@ input[id="search"] {
   background: darkgray;
 }
 
-.ppt_tbody td {
+.defaultTd {
   /*padding: 1vw;*/
   width: 100%;
   font-weight: bold;
@@ -98,7 +98,21 @@ input[id="search"] {
   text-align: left;
   vertical-align: middle;
   margin: 0 1vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.resultTd {
+  width: 100%;
+  font-weight: bold;
+  /* line-height: 2.1vw;  /*line-height: 2vw;*/
+  line-height: calc(1.2vw + 6px);  /*line-height: 2vw;*/
+  font-size: calc(.85vw + 2px);
+  /*border-bottom: 1px solid gray;*/
+  vertical-align: middle;
+  text-align: left;
+  margin: 0 1vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -135,13 +149,20 @@ img.group_img {
   text-align: center;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 1vw;
-  margin-bottom: 0.3vw;
+  margin: 0.6vw 1vw 0.25vw 1vw;
+  /*  margin-bottom: 0.3vw;*/
   /*margin: 4px 1vw 4px 1vw;*/
   /*margin: 0.5vw 1vw 0.5vw 1vw;*/
 
 }
-
+.table_email {
+  font-weight: 100;
+  font-size: calc(.6vw + 2px);
+  margin-left: 4vw;
+  margin-top: -1.45vw;
+  display: block;
+  color: gray;
+}
 
 .wrapper{
   height:100%;
@@ -326,7 +347,7 @@ input[id="first_date"], input[id="second_date"] {
   border-color: #5986FD !important;
 }
 .ui-datepicker-calendar .ui-state-active {
-  background: #5986FD !important;  change color
+  background: #5986FD !important;
   color: white;
 }
 .ui-datepicker-calendar .ui-state-highlight {
@@ -372,14 +393,14 @@ input[id="submit"] {
 /*style for phones*/
 @media (max-width: 480px) {
   .newEventLabel {
-      font-size: 5.5vw;
-      line-height: 5vw;
+    font-size: 5.5vw;
+    line-height: 5vw;
   }
   .cancelLabel {
     font-size: 4vw;
     line-height: 15vw;
   }
-  input[id="search"] {
+  input[id="tcSearch"] {
     font-size: calc(2.1vmax + 6px);
     padding-left: 3vw;
   }
