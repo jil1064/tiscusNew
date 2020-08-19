@@ -44,6 +44,10 @@ router.post('/register', (request, response) => {
     user = null;
 })
 
+router.get('/login',(require,response)=>{
+    response.render('login')
+})
+
 /**
  * 查询用户信息
  * @author 风灵玄

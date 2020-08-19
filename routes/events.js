@@ -2,9 +2,7 @@ const express = require('express');
 const router = express.Router();
 //事件数据实体
 const Events = require('../model/events');
-const data = {
-    rsvp: ['ixd@ucsd.edu']
-};
+
 /**
  * 测试添加事件方法
  * @author 风灵玄

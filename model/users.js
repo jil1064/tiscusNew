@@ -19,7 +19,7 @@ const usersSchema=new Schema({
 });
 //使用插件做自增字段
 usersSchema.plugin(autoIncrement.plugin,{
-    model: 'test_users',
+    model: 'users',
     field: 'userID',
     startAt: 1000000,
     incrementBy: 1

@@ -91,7 +91,7 @@
 <div class='selectPage page leftPage text' style="display: inline-block;">
     <div class='genBar'>
         <p class="title">New Event</p>
-        <button><img class='icon back' src='img/back.png'></button>      
+        <button><img class='icon back' src='img/back.png'></button>
     </div>
     <div class='info'>
         <div class="wrapper">
@@ -104,7 +104,7 @@
                 <thead class="ppt_thead">
                 <tr>
                     <!--                    <th><input type="text" id="tcSearch" placeholder="Schedule with:" onkeyup="searchPpt()"></th>-->
-                    <th><input type="text" id="tcSearch"  placeholder="Schedule with:"></th>
+                    <th><input type="text" id="tcSearch" placeholder="Schedule with:"></th>
 
                 </tr>
                 </thead>
@@ -131,7 +131,7 @@
         <p id="ppt_lbl" class='nonimpt'>Participants</p>
         <div class="confirm_ppt">
         </div>
-        <form id="calForm" class='normalt' oninput="validate()">
+        <form id="tcForm" class='normalt' oninput="validate()">
             Event Title<span style='color: red'>*</span><br>
             <input type="text" id="tcTitle" name="event"><br>
             <div class='spacing'></div>
@@ -175,6 +175,7 @@
     <tr>
         <td class='defaultTd'><img class="group_img" src="img/groupImg.png">{{groupName}}</td>
     </tr>
+
 </script>
 
 <script id="tcSearchResult" type="text/x-handlebars-template">
@@ -187,10 +188,8 @@
     </td>
 </tr>
 
+
 </script>
-
-
-<script src="/js/messy.js"></script>
 
 <script src="/js/tcMeet.js"></script>
 

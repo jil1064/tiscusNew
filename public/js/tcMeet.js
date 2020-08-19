@@ -50,20 +50,21 @@ $('tbody').on('click', 'tr', function () {
     $('.border').show();
 
     $(this).find("td").each(function () {
-
+        //事件人数计数
         count = $('.ppt .circle:visible').length + 1;
-        console.log(count);
+        // console.log(count);
 
         initial = $(this).closest('tr').find('.table_circle').text();
         console.log(initial);
-
-        //点击搜索结果生成名字缩写
-        var get_name = $(this).closest('tr').find('td').text();
-        get_name = get_name.substring(2);
-        get_name = get_name.split(' ')
-        fullname = get_name[0] + " " + get_name[1] + " ";
-        console.log(fullname);
-
+        /*
+                //点击搜索结果生成名字缩写
+                var get_name = $(this).closest('tr').find('td').text();
+                console.log(get_name)
+                get_name = get_name.substring(2);
+                get_name = get_name.split(' ')
+                fullname = get_name[0] + " " + get_name[1] + " ";
+                console.log(fullname);
+        */
 
         if (count != 0) { //show 4 rows when there's participants 显示4行
             console.log('here1');
@@ -90,7 +91,7 @@ $('tbody').on('click', 'tr', function () {
                 circles.append("<div class='minus'>-</div>")
                 $(".selectPage .ppt").append(circles);
                 console.log(fullname);
-                circles.attr('id', fullname);
+                circles.attr('id', $(this).closest('tr').find('.userID').text());
                 console.log(count);
             } else {
                 console.log("group clicked");
@@ -215,7 +216,7 @@ function validate() {
     if (event_title.value != "" && time != 000 && first_date.value != "") {
         console.log("in here");
         //note打字时反复，需修改
-        $('#submit').fadeIn({ queue: true });
+        $('#submit').fadeIn({queue: true});
     } else {
         console.log("else");
         document.getElementById('submit').style.display = "none";
@@ -239,7 +240,7 @@ $('#first_date').change('input', function () {
     var time = meeting_hr.value + meeting_min.value;
     if (event_title.value != "" && time != 000 && first_date.value != "") {
         console.log("in here");
-        $('#submit').fadeIn({ queue: true });
+        $('#submit').fadeIn({queue: true});
     } else {
         console.log("else");
         document.getElementById('submit').style.display = "none";
@@ -250,7 +251,6 @@ $('#first_date').change('input', function () {
 //提交表单
 function initCreateTc() {
     $('#tcForm').submit(function (e) {
-        alert('sendInvi');
         e.preventDefault();
         console.log("submit form...");
         let tcTitle = $('#tcTitle').val();
@@ -266,6 +266,7 @@ function initCreateTc() {
         $.ajax({
             url: 'events/submitTc',
             type: 'post',
+            cache:false,
             data: {
                 tcTitle: tcTitle,
                 tcNotes: tcNotes,
@@ -280,8 +281,6 @@ function initCreateTc() {
     });
 
     function postCallback(res) {
-        alert("RSVP form successfully submitted");
-        $('#tcTitle').val('');
         console.log(res)
     }
 }

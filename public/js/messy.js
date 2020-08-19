@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(".welcome").fadeIn(1000);
     $(".welcome").delay(1000);
     $(".welcome").fadeOut(1000);
-//    initCreateTc();
+   initCreateTc();
 });
 
     function pageTransition(x, y, z) {
