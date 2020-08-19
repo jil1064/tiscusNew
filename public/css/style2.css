@@ -1,3 +1,16 @@
+.ads {
+    display: block;
+    background: none;
+}
+
+.monthView {
+    z-index: 400;
+    width: 31vw;
+    height: 100vh;
+    left: 34.5vw;
+    top: 0;
+}
+
 .welcome {
     display: none;
     position: absolute;
@@ -64,14 +77,6 @@
     left: 7px;
     top: 3px;
     width: 8vw;
-}
-
-.monthView {
-    z-index: 400;
-    width: 31vw;
-    height: 100vh;
-    left: 34.5vw;
-    top: 0;
 }
 
 .monthBar {
@@ -154,18 +159,17 @@
 #todayDate {
     position: fixed;
     left: 44vw;
-    top: 7.5vh;
+    top: 7.7vh;
     display: inline-block;
     width: 12vw;
 /*    border-radius: 5px;*/
     font-family: 'Arial';
-    font-size: 27px;
+    font-size: calc(1.5vw + 6px);
     font-weight: lighter;
 }
 
 .todayDate1 {
     background: white;
-/*    color: #87f1ef;*/
     color: #5986fd;
 }
 
@@ -347,13 +351,6 @@ button {
     top: .25vw;
 }
 
-#createSlot {
-    width: 45px;
-    position: fixed;
-    left: 57vw;
-    top: 6.7vh;
-}
-
 #account {
     position: fixed;
     right: 30vw;
@@ -365,32 +362,6 @@ button {
     transform: rotate(45deg);
     background: white;
     box-shadow: 0 0 4px 2px rgb(0,0,0,.3);
-}
-
-.page {
-    display: inline-block;
-    position: fixed;
-    background: white;
-    box-shadow: 0 2px 4px rgb(0,0,0,.4);
-    display: none;
-}
-
-.rightPage {
-    z-index: 800;
-    width: 22vw;
-    height: calc(15vw + 260px);
-    right: 8.5%;
-    top: 10%;
-    position: fixed;
-}
-
-.leftPage {
-    z-index: 800;
-    width: 22vw;
-    height: calc(15vw + 260px);
-    left: 8.5%;
-    top: 10%;
-    position: fixed;
 }
 
 #profilePic {
@@ -417,12 +388,6 @@ button {
     top: -0.5vw;
 }
 
-#editDel {
-    position: absolute;
-    left: 9.25vw;
-    top: 0;
-}
-
 #notiBell {
     position: fixed;
     left: 38.8vw;
@@ -430,11 +395,17 @@ button {
     width: 50px;
 }
 
+#createSlot {
+    width: 45px;
+    position: fixed;
+    right: 38.8vw;
+    top: 6.7vh;
+}
+
 .colorChoice {
-    width: 110%;
-    margin-left: -5%;
+    width: 20vw;
     text-align: center;
-    margin-top: 10px;
+    margin: -5px 0 5px -1.2vw;
 }
 
 .colorDot {
@@ -442,6 +413,7 @@ button {
     border: 5px solid white;
     width: 2.5vw;
     height: 2.5vw;
+    display: inline-block;
 }
 
 /*
@@ -490,6 +462,9 @@ input {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: darkgray;
 }
 
 .reocChoice input {
@@ -666,14 +641,47 @@ input {
     text-align: center;
 }
 
-.funcbtn {
-    width: 100%;
+.funcRow {
+    margin-bottom: 1.5vw;
+}
+
+.funcDiv {
+    width: 80%;
     padding: 8px 0;
-    color: white;
-    text-align: center;
+    color: black;
+    text-align: left;
     border-radius: 10px;
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.funcLogo {
+    width: 3vw;
+    display: inline-block;
+    margin: 0 8px 0 0;
+}
+
+.funcDiv:hover {
+    background: #efefef;
+}
+
+.funcAbout {
+    border-radius: 50%;
+    border: 1px solid #5986fd;
+    width: 1.6vw;
+    height: 1.6vw;
+    font-size: 1.1vw;
+    color: #5986fd;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: -3.1vw;
+    left: 87%;
+    cursor: pointer;
 }
 
 #createMeet {
@@ -755,7 +763,8 @@ input {
     #todayDate {
         width: 44vw;
         left: 28%;
-        top: 23px;
+        top: 30px;
+        font-size: 8vw;
     }
 
     .timeSlot {
@@ -784,19 +793,13 @@ input {
         Right: 4vw;
     }
 
-    .page {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
     #profilePic {
         width: 20vw;
     }
-
-    #editDel {
-        left: 45vw;
+    
+    .colorChoice {
+        width: 80vw;
+        margin-left: 0;
     }
 
     .colorDot {
@@ -809,40 +812,53 @@ input {
     }
 
     #functional {
-        left: -18vw;
+        left: -20vw;
         top: auto;
-        bottom: -18vw;
-        width: 36vw;
-        height: 36vw;
-        padding: 0 0 0 20vw;
+        bottom: -20vw;
+        width: 40vw;
+        height: 40vw;
         transform: rotate(45deg);
     }
+    
+    .funcRow {
+        margin-bottom: 3vh;
+    }
+    
+    .funcDiv {
+        font-size: 25px;
+    }
 
-    #createSlot {
-        width: 17vw;
-        left: 76vw;
-        top: 17px;
+    .funcLogo {
+        width: 12vw;
+        margin: 0 16px 0 0;
+    }
+
+    .funcAbout {
+        width: 7vw;
+        height: 7vw;
+        font-size: 18px;
+        margin-top: -12vw;
     }
 
     .funcicon {
-        left: 1.5vw;
+        left: 1.25vw;
         top: auto;
-        bottom: 1.5vw;
+        bottom: 1.25vw;
     }
 
     .accounticon {
-        right: 1.5vw;
+        right: 1.25vw;
         top: auto;
-        bottom: 1.5vw;
+        bottom: 1.25vw;
     }
 
     #account {
-        right: -18vw;
-        top:auto;
-        bottom: -18vw;
-        width: 36vw;
-        height: 36vw;
-        padding: 0 22vw 0 0;
+        right: -20vw;
+        top: auto;
+        bottom: -20vw;
+        width: 40vw;
+        height: 40vw;
+/*        padding: 0 22vw 0 0;*/
         transform: rotate(45deg);
     }
 
@@ -875,11 +891,17 @@ input {
         top: -1vw;
         right: 3vw;
     }
-
+    
     #notiBell {
         width: 19vw;
         left: 6vw;
         top: 15px;
+    }
+    
+    #createSlot {
+        width: 17vw;
+        right: 6vw;
+        top: 17px;
     }
 
     .chooseTimeCard {

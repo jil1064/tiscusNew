@@ -44,7 +44,7 @@ $(window).on('resize', function (e) {
 });
 
 
-//点击最上方显示的已选用户后触发
+//点击搜索结果后触发
 $('tbody').on('click', 'tr', function () {
     $('.ppt').show();
     $('.border').show();
@@ -141,8 +141,9 @@ $('.ppt').on('click', '.circle', function () {
 
 });
 
-//点击“next”后页面变更
+//点击“next”后页面变更，复制所选用户
 $("#select_next").click(function () {
+    $('.tmConfirm .confirm_ppt').empty();
     $('.selectPage .ppt').clone().appendTo('.tmConfirm .confirm_ppt');
     $('.confirm_ppt').css("padding-top", "0.5vw");
     $('.confirm_ppt .minus').remove();
@@ -203,19 +204,18 @@ $("#second_date").datepicker({
 //表单提交前的验证
 function validate() {
     document.getElementById('submit').style.display = "none";
-    console.log(event_title.value);
+    var event_title = $('#tcTitle');
     var meeting_hr = document.getElementById('hr');
-    console.log(meeting_hr.value);
     var meeting_min = document.getElementById('min');
-    console.log(meeting_min.value);
+    var time = meeting_hr.value + meeting_min.value;
     var date = document.getElementById('first_date');
     var start_date = $('#first_date').datepicker().val();
-    console.log(start_date);
 
     /*check for required questions not empty/checked  确认必填问题已输入信息*/
-    if (event_title.value != "" && meeting_hr.value != "" && meeting_min.value != "" && first_date.value != "") {
+    if (event_title.value != "" && time != 000 && first_date.value != "") {
         console.log("in here");
-        document.getElementById('submit').style.display = "block";
+        //note打字时反复，需修改
+        $('#submit').fadeIn({ queue: true });
     } else {
         console.log("else");
         document.getElementById('submit').style.display = "none";
@@ -233,9 +233,13 @@ $('#first_date').change('input', function () {
     $('#second_date').datepicker('option', 'maxDate',
         new Date((end_date.getMonth() + 1) + "/" + end_date.getDate() + "/" + end_date.getFullYear())).datepicker('setDate', end_date);
 
-    if (event_title.value != "" && hr.value != "" && min.value != "" && start_date != "") {
+    var event_title = $('#tcTitle');
+    var meeting_hr = document.getElementById('hr');
+    var meeting_min = document.getElementById('min');
+    var time = meeting_hr.value + meeting_min.value;
+    if (event_title.value != "" && time != 000 && first_date.value != "") {
         console.log("in here");
-        document.getElementById('submit').style.display = "block";
+        $('#submit').fadeIn({ queue: true });
     } else {
         console.log("else");
         document.getElementById('submit').style.display = "none";

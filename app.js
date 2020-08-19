@@ -27,10 +27,12 @@ app.engine('handlebars', handlebars());
 
 //路由模块
 const index = require('./routes/index');
+const login=require('./routes/login');
 const account=require('./routes/account');
 const events=require('./routes/events');
 
 //注册路由
+app.use('/login',login);
 app.use('/account',account);
 app.use('/events',events);
 app.use('/', index.view);

@@ -90,9 +90,8 @@
 
 <div class='selectPage page leftPage text' style="display: inline-block;">
     <div class='genBar'>
-        <button><img class='icon' id='back' src='img/back.png'></button>
-        <p class="newEventLabel">New Event</p>
-        <!--<button id='createMeet'>+</button>-->
+        <p class="title">New Event</p>
+        <button><img class='icon back' src='img/back.png'></button>      
     </div>
     <div class='info'>
         <div class="wrapper">
@@ -110,31 +109,6 @@
                 </tr>
                 </thead>
                 <tbody class="ppt_tbody">
-<!--                <tr>-->
-<!--                    <td class='defaultTd'><img class="group_img" src="img/groupImg.png">Study Group-->
-<!--                    </td>-->
-<!--                </tr>-->
-
-                <!--                <tr>-->
-                <!--                    <td class='resultTd'><div class="table_circle">CL</div>Crystal Lu<div class='table_email'>abcdefg@ucsd.edu</div>-->
-                <!--                    </td>-->
-                <!--                </tr>-->
-                <!--                <tr>-->
-                <!--                    <td class='resultTd'><div class="table_circle">JB</div>James Bieber<div class='table_email'>abcdefg@ucsd.edu</div>-->
-                <!--                    </td>-->
-                <!--                </tr>-->
-                <!--                <tr>-->
-                <!--                    <td class='resultTd'><div class="table_circle">AK</div>Amy Kenn<div class='table_email'>abcdefg@ucsd.edu</div>-->
-                <!--                    </td>-->
-                <!--                </tr>-->
-                <!--                <tr>-->
-                <!--                    <td class='resultTd'><div class="table_circle">JB</div>James Bieber<div class='table_email'>abcdefg@ucsd.edu</div>-->
-                <!--                    </td>-->
-                <!--                </tr>-->
-                <!--                <tr>-->
-                <!--                    <td class='resultTd'><div class="table_circle">CL</div>Crystal Lu<div class='table_email'>abcdefg@ucsd.edu</div>-->
-                <!--                    </td>-->
-                <!--                </tr>-->
                 </tbody>
             </table>
             <br><br>
@@ -149,56 +123,49 @@
 
 <div class='tmConfirm page leftPage text' style="display: none;">
     <div class='genBar' style="clear: both;">
-        <button><img class='icon' id='back' src='img/back.png'></button>
+        <p class="title">New Event</p>
+        <button><img class='icon back' src='img/back.png'></button>
         <a class="cancelLabel">Cancel</a>
-        <p class="newEventLabel">New Event</p>
     </div>
     <div class="info">
-        <p id="ppt_lbl">Participants</p>
+        <p id="ppt_lbl" class='nonimpt'>Participants</p>
         <div class="confirm_ppt">
-            <!--<div class="circle">JB</div>
-            <div class="circle">CL</div>
-            <div class="circle">CL</div>
-            <div class="circle">CL</div>
-            <div class="circle">CL</div>-->
         </div>
-        <form id="tcForm" oninput="validate()">
-            Event Title*<br>
+        <form id="calForm" class='normalt' oninput="validate()">
+            Event Title<span style='color: red'>*</span><br>
             <input type="text" id="tcTitle" name="event"><br>
-            How long would you like to meet?*<br>
+            <div class='spacing'></div>
+            How long would you like to meet?<span style='color: red'>*</span><br>
             <div class="time_select">
                 <select name="hr" id="hr">
-                    <option style="display:none;"></option>
-                    <option value="0">0</option>
+                    <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <label for="hr" class="time_label">Hr&nbsp;</label>
+                <label for="hr" class="normalt">Hr&nbsp;</label>
                 <select name="min" id="min">
-                    <option style="display:none;"></option>
-                    <option value="00">00</option>
+                    <option value="00" selected>00</option>
                     <option value="15">15</option>
                     <option value="30">30</option>
                     <option value="45">45</option>
                 </select>
-                <label for="min" class="time_label">Min</label><br>
+                <label for="min" class="normalt">Min</label><br>
             </div>
-            Any constraint?* (3-day default)<br>
+            <div class='spacing'></div>
+            Any constraint?<span style='color: red'>*</span> (3-day default)<br>
             <div class="choose_date">
                 <input type="text" id="first_date" name="first_date" placeholder="m/d/yyyy" readonly>
                 <p style="display: inline;"> - </p>
                 <input type="text" id="second_date" placeholder="m/d/yyyy" readonly>
             </div>
+            <div class='spacing'></div>
             Notes<br>
-            <!-- <input type="text" id="notes" name="notes"><br> -->
-            <textarea type="text" id="tcNotes" name="notes" maxlength="20"></textarea><br>
-            <!--about 26 per line, so 50ish-->
-            <!-- <div id="notes" name="notes" contentEditable="true" maxlength="5"></div> -->
+            <textarea type="text" id="tcNotes" name="notes" maxlength="60"></textarea><br>
             <div class="subm">
-                <input type="submit" id="submit" value="Send Invites">
+                <input type="submit" id="submit" class='pbutton' value="Send Invites" style="display: none;">
             </div>
         </form>
     </div>
@@ -206,18 +173,17 @@
 
 <script id="tcEmptyResult" type="text/x-handlebars-template">
     <tr>
-        <td class='defaultTd'><img class="group_img" src="img/groupImg.png">{{groupName}}
-    </td>
-</tr>
-
+        <td class='defaultTd'><img class="group_img" src="img/groupImg.png">{{groupName}}</td>
+    </tr>
 </script>
 
 <script id="tcSearchResult" type="text/x-handlebars-template">
 <tr>
     <td class='resultTd'>
         <div class="table_circle" style="background-image: url(\{{imgUrl}});"></div>
-        <span>\{{userName}}</span>
+        <span class='userName'>\{{userName}}</span>
         <div class='table_email'>\{{email}}</div>
+        <div class='userID' style="display: none;">\{{userID}}</div>
     </td>
 </tr>
 

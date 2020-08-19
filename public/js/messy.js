@@ -8,13 +8,18 @@ $(document).ready(function () {
 
     function pageTransition(x, y, z) {
       $(x).click(function(){
-          //alert("called");
           $(y).fadeOut();
           $(z).fadeIn();
       });
     }
 
-    pageTransition('#select_next', '.selectPage', '.tmConfirm');
+    function pageStack(x, y) {
+      $(x).click(function(){
+          $(y).fadeIn();
+      });
+    }
+
+    pageStack('#select_next', '.tmConfirm');
 
 $('.timeSlot').click(function () {
     var y = $(this).position().top;
@@ -34,11 +39,10 @@ $(".todayEvents").scroll(function () {
 
 $('#createSlot').click(function () {
     $('.rightPage').fadeOut();
-    $('.editBar').css('background-color', '#fff24d');
+    $('.editBar').css('background-color', '#5986fd');
     $('.colorDot').css('border', '5px solid white');
-    $('#yellowDot div').css('border', 'none');
-    $('#setDate').attr("placeholder", "Date");
-    $('#setDate2').attr("placeholder", "Different day?");
+    $('#blueDot div').css('border', 'none');
+//    $('#setDate').attr("placeholder", "Date");
     $('.editPage').fadeIn();
 });
 
@@ -65,15 +69,18 @@ $('#chooseMonth').click(function () {
     $('#selectMonth').toggle("fast");
 });
 
-$('#back, #ok, #reject, #accept').click(function () {
+$('.back, #ok, #reject, #accept').click(function () {
     $(this).parent().parent().parent().fadeOut();
 });
 
+var color = '#5986fd';
 $('.colorDot').click(function () {
     $('.colorDot').css('border', '5px solid white');
     $(this).css('border', 'none');
-    var color = $(this).css('background');
+    color = $(this).css('background');
     $('.editBar').css('background', color);
+    $('#calSubmit').css('background', color);
+//    $('#calNotes').css('border-color', color);
 });
 
 $('#delThis, #delTc, #delReoc, #confirm').click(function () {

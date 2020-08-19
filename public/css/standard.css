@@ -8,7 +8,7 @@
     font-weight: 400;
 }
 
-.labelt {
+.colort {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 1.3vw;
@@ -18,56 +18,71 @@
 .normalt {
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 1.3vw;
+    font-size: calc(.8vw + 3px);
+    color: black;
 }
 
 .nonimpt {
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 1.3vw;
+    font-size: calc(.6vw + 3px);
     color: darkgray;
 }
 
 /*layouts*/
+
+.page {
+    display: inline-block;
+    position: fixed;
+    background: white;
+    box-shadow: 0 2px 4px rgb(0,0,0,.4);
+    display: none;
+    width: 22vw;
+    height: calc(15vw + 280px);
+}
+
+.rightPage {
+    z-index: 800;
+    right: 8.5%;
+    top: 10%;
+    position: fixed;
+}
+
+.leftPage {
+    z-index: 800;
+    left: 8.5%;
+    top: 10%;
+    position: fixed;
+}
 
 .editBar, .genBar {
     display: inline-block;
     background-color: #5986FD;
     width: 100%;
     height: 3.5vw;
+    text-align: center;
 }
 
-#ok, #setting {
+#editDel, #setting {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-#back {
+.back {
     position: absolute;
     left: -2px;
     top: 0;
 }
 
-/*Problematic*/
 .info {
     position: absolute;
     top: 3.5vw;
-    height: calc(11.5vw + 260px);
+    height: calc(11.5vw + 280px);
     width: 100%;
-    padding: 1.3vw 2.2vw;
+    padding: 1.3vw 2.2vw 0 2.2vw;
     overflow: scroll;
-    /*padding-top: 1vw;*/
 }
-
-/*.info {
-    position: absolute;
-    top: 3.5vw;
-    height: calc(11.5vw + 260px);
-    width: 100%;
-    padding: 0.1vw 2.2vw;
-    overflow: scroll;
-}*/
 
 /*elements*/
 
@@ -84,10 +99,6 @@
     width: 3.5vw;
 }
 
-.icon2 {
-    width: 3vw;
-}
-
 .dbutton {
     border: 1px solid lightgray;
     color: #bdbdbd;
@@ -95,7 +106,7 @@
     border-radius: 3vw;
     width: auto;
     height: auto;
-    padding: .5vw 1.5vw;
+    padding: .4vw 1.5vw;
     font-family: 'Roboto';
     font-size: 1.2vw;
     font-weight: 400;
@@ -108,23 +119,25 @@
     border-radius: 3vw;
     width: auto;
     height: auto;
-    padding: .5vw 1.5vw;
+    padding: .4vw 1.5vw;
     font-family: 'Roboto';
     font-size: 1.2vw;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .pbutton {
-    border: 1px solid #5986fd;
+/*    border: 1px solid #5986fd;*/
     color: white;
     background: #5986fd;
     border-radius: 3vw;
     width: auto;
     height: auto;
-    padding: .5vw 1.5vw;
+    padding: .4vw 1.5vw;
     font-family: 'Roboto';
     font-size: 1.2vw;
     font-weight: 400;
+    cursor: pointer;
 }
 
 /*color theme*/
@@ -153,37 +166,32 @@
         font-size: 7vw;
     }
 
-    .labelt, .normalt, .nonimpt {
-        font-size: 5.5vw;
+    .colort, .normalt {
+        font-size: 5vw;
+    }
+    
+    .nonimpt {
+        font-size: 3.5vw;
     }
 
     /*layouts*/
+    
+    .page {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     .editBar, .genBar {
         height: 15vw;
     }
 
-    #ok, #setting {
-        top: 1vh;
-    }
-
-    #back {
-        top: 1vh;
-    }
-
-/*Problematic*/
     .info {
         top: 15vw;
-        /*margin-top: 4vw;*/
         height: 90vh;
         padding: 4vw 10vw;
     }
-
-    /*.info {
-        top: 15vw;
-        height: 90vh;
-        padding: 0 10vw;
-    }*/
 
     /*elements*/
 
@@ -193,8 +201,8 @@
         margin: 0 1vw;
     }
 
-    .icon, .icon2 {
-        width: 12vw;
+    .icon {
+        width: 15vw;
     }
 
     .dbutton, .lbutton, .pbutton {
@@ -202,6 +210,6 @@
         padding: 1.5vw 6vw;
         font-size: 5.5vw;
     }
-
+  
 
 }

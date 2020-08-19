@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <title>Tiscus - Make your time meaningful</title>
+    <link rel="icon" href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link href="/css/standard.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese'
+          rel='stylesheet'>
+</head>
+
+<body>
+    
+    <img src='img/loginBG.png' style='position: fixed; bottom: 0; left: 0; width: 100%; opacity: .4;'>
+
+    <div class="col-sm-4"></div>
+        
+        <div class="col-sm-4" style="text-align: center;">
+    
+            <div class="login">
+                <form id="loginForm" class='normalt' oninput="validateCal()">
+                    <img id="loginLogo" src="img/loginLogo.png">
+                    <br><br>
+                    <input type="text" name="email" placeholder="email">
+                    <br><br>
+                    <input type="text" name="password" placeholder="password">
+                    <p><a href="#" style="color: white; text-decoration: underline">Forget password?</a></p>
+                    <br>
+                    <input type="button" onclick="#" value="Sign up"/>
+                    <a id='Godislove' style="color:transparent">Gos is love.</a>
+                    <input type="button" onclick="#" value="Log in"/>
+                    <br><br>
+                    <div id='errorHint'>We can't find this email... <br>↑ Want to sign up?</div>
+                </form>
+            </div>           
+        </div>
+        
+        <div class="col-sm-4"></div>
+
+    
+</body>
+    
+<style>
+
+.login {
+    background: #5986fd;
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+    border-radius: 5vw;
+    padding: 3vw;
+    box-shadow: 0 6px 10px rgb(0,0,0,.4);
+}
+    
+#loginLogo {
+    width: 140px;
+}    
+
+input[type=text] {
+    border: 2px solid white;
+    border-radius: 2.5vw;
+    background: transparent;
+    height: 45px;
+    width: 220px;
+    padding-left: 10px;
+    color: white;
+}
+
+::placeholder {
+    color: white; 
+} 
+
+input[type=button] {
+    border: none;
+    border-radius: 2vw;
+    background: white;
+    color: #5986fd;
+    padding: 3px 12px;
+    width: auto;
+}
+    
+#errorHint {
+    color: #5986fd; 
+    background: white; 
+    opacity: .75; 
+    margin: 0 2.5vw; 
+    padding: .5vw 0; 
+    border-radius: 5px;
+}
+    
+/*
+.loginBG {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    opacity: .4;
+    -webkit-animation-name: lbAnim;
+    -webkit-animation-duration: 9s; 
+    animation-name: lbAnim;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+    
+@-webkit-keyframes lbAnim {
+  from {
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    opacity: .4;}
+  to {
+    bottom: 10vh; 
+    left: -20%; 
+    width: 140%; 
+    opacity: 0;}
+}
+
+@keyframes lbAnim {
+  from {
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    opacity: .4;}
+  to {
+    bottom: 10vh; 
+    left: -20%; 
+    width: 140%; 
+    opacity: 0;}
+}
+*/
+#Godislove {
+    font-size: 10px;
+}
+    
+@media (max-width: 480px) {
+    
+    .login {
+        width: 80%;
+        margin-left: 10%;
+        padding: 10vw;
+    }
+    
+    input[type=text] {
+        border-radius: 10vw;
+        height: 40px;
+        width: 180px;
+    }
+    
+    input[type=button] {
+        border-radius: 5vw;
+    }
+    
+    #Godislove {
+        font-size: 6px;
+    }
+    
+    #errorHint {
+        margin: 0vw;
+    }
+
+}
+    
+</style>
+    
