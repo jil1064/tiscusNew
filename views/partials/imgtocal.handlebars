@@ -1,0 +1,65 @@
+<div class='imgtocalPage page leftPage text'>
+        <div class='genBar'>
+            <p class='title'>Img-to-Cal</p>
+            <button><img class='icon back' src='img/back.png'></button>
+<!--            <button><img class='icon AIcomplete' id='ok' src='img/ok.png'></button>-->
+            <button></button>
+        </div>
+<!--        <div class='info sAI1'>-->
+        <div class='info sAI2'>
+            
+            <form class="uploadimgForm normalt">
+                <div id="drop-area" class='text'>
+<!--                <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">-->
+                <input type="file" id="fileElem" multiple accept="image/*">
+                <label id="selectFile" class='lbutton' for="fileElem">Select file</label>
+                <p>Accept .jpg .png</p>
+                </div>
+                <div class="subm">
+                    <br><br><br><br>
+                    <input type="submit" id="AInext" class='pbutton' value="Convert">
+                </div>
+            </form>
+          
+        </div>
+    
+<!--        <div class='info sAI2' style='display: none;'>-->
+        <div class='info sAI1 normalt'>
+            <p></p>
+            <button id='reoc2' class="text" data-toggle="collapse" href="#reocGroup2" role="button"
+                    aria-expanded="false" aria-controls="reocGroup2">&SmallCircle; Smart Reoccur?
+            </button>
+            <div class="collapse" id="reocGroup2">
+                <div class="card card-body">
+                    <p>end&emsp;<input id='occurUntil' placeholder="2019-12-27" onfocus="(this.type='date')" style='width: 135px'></p>
+                </div>
+            </div>
+            <p></p>
+            <div id='ITCresult'>
+                <script id="tcSearchResult" type="text/x-handlebars-template">
+                    <div class='oneResult'>
+                        <input style='text-decoration: underline; width: 100%;' value='{{slot_title}}'><br>
+                        <input style='width: 40%;' value='{{dateORreoccur}}'>
+                        <input style='width: 55%;' value='{{startTime}}-{{endTime}}'>
+                    </div>
+                </script>
+                <div class='oneResult'>
+                    <input style='text-decoration: underline; width: 100%;' value='ECON 100A LE'><br>
+                    <input style='width: 40%;' value='Mon Wed Fri'>
+                    <input style='width: 55%;' value='10:00am-10:50am'>
+                </div>
+                <div class='oneResult'>
+                    <input style='text-decoration: underline; width: 100%;' value='ECON 100A DI'><br>
+                    <input style='width: 40%;' value='Thu'>
+                    <input style='width: 55%;' value='7:00pm-7:50pm'>
+                </div>
+                <div class='oneResult'>
+                    <input style='text-decoration: underline; width: 100%;' value='ECON 100A FI'><br>
+                    <input style='width: 40%;' value='6/12'>
+                    <input style='width: 55%;' value='8:00am-10:59am'>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>

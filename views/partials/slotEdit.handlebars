@@ -1,0 +1,62 @@
+<div class='editPage page rightPage text'>
+
+        <div class='editBar'>
+            <button><img class='icon back' src='img/back.png'></button>
+            <button data-toggle="modal" data-target="#deleteModal"><img class='icon' id='editDel' src='img/delete2.png'>
+            </button>
+        </div>
+
+        <div class='info'>
+            <form id="calForm" class='normalt' oninput="validateCal()">
+                <p class='normalt'>Title/Notes<span style='color: red'>*</span><br>
+                <textarea type="text" id="calNotes" name="notes" maxlength="60" style="border-color: #efefef;"></textarea></p>    
+                <div class='colorChoice'>
+<!--                    <button id='yellowDot'>-->
+                        <div class='colorDot' style='background:#ffdd00'></div>
+<!--                    <button id='greenDot'>-->
+                        <div class='colorDot' style='background:#6a903a'></div>
+<!--                    <button id='cyanDot'>-->
+                        <div class='colorDot' style='background:#0091bd'></div>
+<!--                    <button id='blueDot'>-->
+                        <div class='colorDot' style='background:#5986FD'></div>
+<!--                    <button id='redDot'>-->
+                        <div class='colorDot' style='background:#bd0042'></div>
+<!--                    <button id='pinkDot'>-->
+                        <div class='colorDot' style='background:#ffb999'></div>
+<!--                    <button id='grayDot'>-->
+                        <div class='colorDot' style='background:#DADADA'></div>
+                </div>   
+                <p class='normalt'>Date<span style='color: red'>*</span><br>
+                <input id='setDate' placeholder="08/18/2020" onfocus="(this.type='date')" style='width: 80%'></p>
+                <p class='normalt'>Time<span style='color: red'>*</span><br>
+                <input id='setTime1' placeholder="09:00 AM" onfocus="(this.type='time')" style='width: 40%'>&nbsp;-&nbsp;&nbsp;
+                    <input id='setTime2' placeholder="10:00 AM" onfocus="(this.type='time')" style='width: 40%'><br></p>    
+                <button id='reoc' class="text" data-toggle="collapse" href="#reocGroup" role="button" aria-expanded="false"
+                        aria-controls="reocGroup">&SmallCircle; Reoccur?
+                </button>
+                <div class="collapse" id="reocGroup">
+                    <div class="card card-body">
+                        <p>end&emsp;<input id='occurUntil' placeholder="12/01/2020" onfocus="(this.type='date')" style='width: 135px;'></p>
+                        <div style='column-count: 3; -moz-column-count: 3; -webkit-column-count: 3; margin-top: -10px;'>
+                            <label class="reocChoice">Daily<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Monthly<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Yearly<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Weekly:</label>
+                            <label class="reocChoice">Sun<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Mon<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Tue<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Wed<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Thu<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Fri<input type='checkbox'><span class="checkmark"></span></label>
+                            <label class="reocChoice">Sat<input type='checkbox'><span class="checkmark"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+            <div class="subm">
+                <input type="submit" id="calSubmit" class='pbutton' value="Confirm">
+            </div>
+        </form>  
+    </div>
+</div>

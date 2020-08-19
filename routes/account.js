@@ -48,6 +48,10 @@ router.get('/login',(require,response)=>{
     response.render('login')
 })
 
+router.get('/signup',(require,response)=>{
+    response.render('signup')
+})
+
 /**
  * 查询用户信息
  * @author 风灵玄

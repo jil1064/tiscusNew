@@ -10,8 +10,8 @@
 
 .colort {
     font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 1.3vw;
+    font-weight: 500;
+    font-size: 1.7vw;
     color: #5986fd;
 }
 
@@ -38,7 +38,7 @@
     box-shadow: 0 2px 4px rgb(0,0,0,.4);
     display: none;
     width: 22vw;
-    height: calc(15vw + 280px);
+    height: calc(22vw + 200px);
 }
 
 .rightPage {
@@ -166,8 +166,12 @@
         font-size: 7vw;
     }
 
-    .colort, .normalt {
+    .normalt {
         font-size: 5vw;
+    }
+    
+    .colort {
+        font-size: 10vw;
     }
     
     .nonimpt {

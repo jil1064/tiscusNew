@@ -365,7 +365,7 @@ button {
 }
 
 #profilePic {
-    width: 5.5vw;
+    width: 4.5vw;
     margin-top: 2vh;
     border-radius: 50%;
     display: inline-block;
@@ -516,12 +516,17 @@ input {
     width: 80%;
 }
 
-#editAccount, #addToGroup, #createGroup, #meetChoose, #submitGroup, #gooCal {
+#addToGroup, #createGroup, #meetChoose, #submitGroup, #gooCal {
+/*#editAccount, #addToGroup, #createGroup, #meetChoose, #submitGroup, #gooCal {*/
     border: 1px solid cadetblue;
     border-radius: 5px;
     color: cadetblue;
     font-weight: 900;
     padding: 0 5px;
+}
+
+#editAccountForm input {
+    border-bottom: 1px solid #5986fd;
 }
 
 #sendInvi {
@@ -611,17 +616,6 @@ input {
   margin-right: 10px;
   vertical-align: middle;
 }
-#selectFile {
-/*  font-size: 16px;*/
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px;
-  border: 1px solid cadetblue;
-  border-radius: 5px;
-  color: cadetblue;
-  font-weight: 900;
-  padding: 0 5px;
-}
 
 #fileElem {
   display: none;
@@ -631,7 +625,7 @@ input {
     opacity: 0;
 }
 
-#AInext, #meetNext {
+#meetNext {
     position: absolute;
     bottom: 50px;
     left: 9.5vw;
@@ -862,7 +856,7 @@ input {
         transform: rotate(45deg);
     }
 
-    #AInext, #meetNext {
+    #meetNext {
         bottom: 10vh;
         left: 43vw;
         width: 15vw;

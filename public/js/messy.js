@@ -102,9 +102,9 @@ $('#setting').click(function () {
     $('.settingPage').fadeIn();
 });
 
-$('#screenshotAI').click(function () {
+$('#funcITC').click(function () {
     $('.sAI2').fadeOut();
-    $('.screenshotAIPage').fadeIn();
+    $('.imgtocalPage').fadeIn();
     $('.sAI1').fadeIn();
     $('.AIcomplete').css('opacity', '0');
 });

@@ -1,0 +1,49 @@
+<div class='accountPage page rightPage text'>
+        <div class='genBar'>
+            <p class="title">Profile</p>
+            <button><img class='icon back' src='img/back.png'></button>
+            <button><img class='icon' id='setting' src='img/setting.png'></button>
+        </div>
+        <div class='info' style='text-align: center;'>
+            <a href='#'><img id='profilePic' src='img/profile.png'></a>
+            <p></p>
+            <p class='colort'>Jianan Liang</p>
+            <p class='normalt' style='margin-top: -1vh;'>jil1064@ucsd.edu</p>
+            <br><br>
+            <button id='editAccount' class='lbutton'>Edit account</button>  
+            <br><br>
+            <button id='logout' class='lbutton' style="border-color: lightgray; color: darkgray">&nbsp;&nbsp;&nbsp;&nbsp;Log out&nbsp;&nbsp;&nbsp;&nbsp;</button> 
+        </div>
+    </div>
+
+    <div class='editAccountPage page rightPage text'>
+        <div class='genBar'>
+            <button><img class='icon back' src='img/back.png'></button>
+        </div>
+        <div class='info'>
+            <form id="editAccountForm" class='normalt' oninput="validateAccount()">
+                <br>User Name<br>
+                <input type='name' id='editAccountName' placeholder="Jianan Liang" style='width: 100%;'><br><br>Email<br>
+                <input type='email' id='editAccountEmail' placeholder="jil1064@ucsd.edu" style='width: 100%;'><br><br>Password<br>
+                <input type='password' id='editAccountPw' placeholder="*************" style='width: 100%;'><br><br>Confirm password<br>
+                <input type='password' id='confirmAccountPw' placeholder="please type" style='width: 100%;'><br><br>        
+                <div class="subm">
+                    <input type="submit" id="submitAccount" class='pbutton' value="Save changes">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class='settingPage page rightPage text'>
+        <div class='genBar'>
+            <button><img class='icon back' src='img/back.png'></button>
+        </div>
+        <div class='info'>
+            <div class='allowNotifyDiv' style='position: relative; cursor: pointer;'>
+                <p>Notifications</p>
+                <button class='allowNotify'></button>
+            </div>
+            
+
+        </div>
+    </div>

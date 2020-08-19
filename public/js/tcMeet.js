@@ -216,7 +216,7 @@ function validate() {
     if (event_title.value != "" && time != 000 && first_date.value != "") {
         console.log("in here");
         //note打字时反复，需修改
-        $('#submit').fadeIn({queue: true});
+        $('#submit').show();
     } else {
         console.log("else");
         document.getElementById('submit').style.display = "none";
@@ -240,7 +240,7 @@ $('#first_date').change('input', function () {
     var time = meeting_hr.value + meeting_min.value;
     if (event_title.value != "" && time != 000 && first_date.value != "") {
         console.log("in here");
-        $('#submit').fadeIn({queue: true});
+        $('#submit').show();
     } else {
         console.log("else");
         document.getElementById('submit').style.display = "none";

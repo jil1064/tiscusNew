@@ -22,22 +22,35 @@
         
         <div class="col-sm-4" style="text-align: center;">
     
-            <div class="login">
-                <form id="loginForm">
-                    <img id="loginLogo" src="/img/loginLogo.png">
+            <div class="signup">
+                <span class='normalt' style='color: white; font-size: 30px;'>Sign Up</span>
+                <br><br>
+                <div class='step1'>
+                    <input id='veriEmail' type="text" name="email" placeholder="email">
                     <br><br>
-                    <input type="text" name="email" placeholder="email">
+                    <input id='sendCode' type="button" value="Send verification code"/>
                     <br><br>
-                    <input type="text" name="password" placeholder="password">
-                    <p><a href="#" style="color: white; text-decoration: underline">Forget password?</a></p>
-                    <br>
-                    <input type="button" onclick="window.location.href='/account/signup'" value="Sign up"/>
-                    <a id='Godislove' style="color:transparent">Gos is love.</a>
-                    <input type="button" id="submitLogin" value="Log in"/>
+                    <input type="text" name="verify" placeholder="Insert code here">
                     <br><br>
-                    <div id='errorHint'>We can't find this email... <br>↑ Want to sign up?</div>
-                </form>
-            </div>           
+                    <input id="verifyCode" type="button" value="Verify"/>                   
+                </div>
+                <form id="signupForm" oninput="validateSetup()" style='display: none;'>
+                    <p id='signupEmail' style='color: white'></p>
+                    <input type="text" name="password" placeholder="Set password">
+                    <br><br>
+                    <input type="text" name="password" placeholder="Confirm password">
+                    <br><br>
+                    <p style='color: white'>Select timezone:</p>
+                    <select name="timezone" id="setTimezone">
+                        <option value="0" selected>Pacific Time</option>
+                        <option value="1">Central Time</option>
+                        <option value="2">Eastern Time</option>
+                    </select>
+                    <br><br><input type="button" id="confirmSignup" value="Confirm"/>
+                </form>        
+                    <br><div id='errorHint'>Oops, the verification code<br> is not correct.</div>    
+            </div>
+            
         </div>
         
         <div class="col-sm-4"></div>
@@ -47,7 +60,7 @@
     
 <style>
 
-.login {
+.signup {
     background: #5986fd;
     width: 100%;
     height: auto;
@@ -55,10 +68,6 @@
     border-radius: 5vw;
     padding: 3vw;
     box-shadow: 0 6px 10px rgb(0,0,0,.4);
-}
-    
-#loginLogo {
-    width: 140px;
 }    
 
 input[type=text] {
@@ -93,54 +102,11 @@ input[type=button] {
     border-radius: 5px;
 }
     
-/*
-.loginBG {
-    position: fixed; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    opacity: .4;
-    -webkit-animation-name: lbAnim;
-    -webkit-animation-duration: 9s; 
-    animation-name: lbAnim;
-    animation-duration: 9s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-    
-@-webkit-keyframes lbAnim {
-  from {
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    opacity: .4;}
-  to {
-    bottom: 10vh; 
-    left: -20%; 
-    width: 140%; 
-    opacity: 0;}
-}
 
-@keyframes lbAnim {
-  from {
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    opacity: .4;}
-  to {
-    bottom: 10vh; 
-    left: -20%; 
-    width: 140%; 
-    opacity: 0;}
-}
-*/
-#Godislove {
-    font-size: 10px;
-}
-    
+
 @media (max-width: 480px) {
     
-    .login {
+    .signup {
         width: 80%;
         margin-left: 10%;
         padding: 10vw;
@@ -156,10 +122,6 @@ input[type=button] {
         border-radius: 5vw;
     }
     
-    #Godislove {
-        font-size: 6px;
-    }
-    
     #errorHint {
         margin: 0vw;
     }
@@ -168,3 +130,34 @@ input[type=button] {
     
 </style>
     
+<script>
+    
+$('#sendCode').click(function(){
+    $(this).prop('disabled', true);
+    $(this).css('opacity', '.8');
+    for (let i = 0; i < 60; i++) {
+        setDelay(i);
+    }
+    setTimeout(function(){
+        $(this).prop('disabled', false);
+        $(this).val('Send verification code');
+        $(this).css('opacity', '1');
+    }, 60000);
+}); 
+    
+function setDelay(i) {
+  setTimeout(function(){
+        var j = 60 - i;
+        $('#sendCode').val('Resend after ' + j + 's');
+  }, 1000*i);
+}
+    
+$('#verifyCode').click(function(){
+    //Ajax
+    $('#signupEmail').html($('#veriEmail').val());
+    $('.step1').hide();
+    $('#signupForm').fadeIn();
+}); 
+
+    
+</script>

@@ -57,22 +57,12 @@
             <div class='funcRow'>
                 <div id='funcITC' class='funcDiv'><img class="funcLogo" src="img/itcLogo.png">Img-to-Cal</div><div id='itcAbout' class='funcAbout'>?</div>
             </div>
-<!--
-            <button id='funcMeet' class='funcbtn' style='background:url(img/Tcmeetimg.jpg) no-repeat 0 -200px;'>Tcmeet
-            </button>
--->
-<!--
-            <button id='funcWITH' class='funcbtn'
-                    style='background:url(img/withimg.jpg) no-repeat center; background-size: 100%;'>WITH
-            </button>
-            <button class='funcbtn'
-                    style="background:url(img/Tiscusserimg.jpg) no-repeat 0 -110px; background-size: 100%;">Tiscusser
-            </button>
--->
         </div>
     </div>
     
-    {{> TcMeet}}
+    {{> TcMeet}}  
+    
+    {{> imgtocal}}
 
     <div class='WITHPage page leftPage text'>
         <div class='genBar'>
@@ -118,170 +108,9 @@
     <div class='page rightPage ads' style='border: 2px dashed white; text-align: center; color: white'><br>here will be ads
     </div>
 
-    <div class='editPage page rightPage text'>
-
-        <div class='editBar'>
-            <button><img class='icon back' src='img/back.png'></button>
-            <button data-toggle="modal" data-target="#deleteModal"><img class='icon' id='editDel' src='img/delete2.png'>
-            </button>
-<!--            <button><img class='icon' id='ok' src='img/ok.png'></button>-->
-        </div>
-
-        <div class='info'>
-            <form id="calForm" class='normalt' oninput="validateCal()">
-                <p class='normalt'>Title/Notes<span style='color: red'>*</span><br>
-                <textarea type="text" id="calNotes" name="notes" maxlength="60" style="border-color: lightgray;"></textarea></p>    
-                <div class='colorChoice'>
-<!--                    <button id='yellowDot'>-->
-                        <div class='colorDot' style='background:#ffdd00'></div>
-<!--                    <button id='greenDot'>-->
-                        <div class='colorDot' style='background:#6a903a'></div>
-<!--                    <button id='cyanDot'>-->
-                        <div class='colorDot' style='background:#0091bd'></div>
-<!--                    <button id='blueDot'>-->
-                        <div class='colorDot' style='background:#5986FD'></div>
-<!--                    <button id='redDot'>-->
-                        <div class='colorDot' style='background:#bd0042'></div>
-<!--                    <button id='pinkDot'>-->
-                        <div class='colorDot' style='background:#ffb999'></div>
-<!--                    <button id='grayDot'>-->
-                        <div class='colorDot' style='background:#DADADA'></div>
-                </div>   
-                <p class='normalt'>Date<span style='color: red'>*</span><br>
-                <input id='setDate' placeholder="08/18/2020" onfocus="(this.type='date')" style='width: 80%'></p>
-                <p class='normalt'>Time<span style='color: red'>*</span><br>
-                <input id='setTime1' placeholder="09:00 AM" onfocus="(this.type='time')" style='width: 40%'>&nbsp;-&nbsp;&nbsp;
-                    <input id='setTime2' placeholder="10:00 AM" onfocus="(this.type='time')" style='width: 40%'><br></p>    
-                <button id='reoc' class="text" data-toggle="collapse" href="#reocGroup" role="button" aria-expanded="false"
-                        aria-controls="reocGroup">&SmallCircle; Reoccur?
-                </button>
-                <div class="collapse" id="reocGroup">
-                    <div class="card card-body">
-                        <p>end&emsp;<input id='occurUntil' placeholder="12/01/2020" onfocus="(this.type='date')" style='width: 135px;'></p>
-                        <div style='column-count: 3; -moz-column-count: 3; -webkit-column-count: 3; margin-top: -10px;'>
-                            <label class="reocChoice">Daily<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Weekly<input type='checkbox'><span class="checkmark"></span></label>
-<!--                            <label class="reocChoice">Biweekly<input type='checkbox'><span class="checkmark"></span></label>-->
-                            <label class="reocChoice">Monthly<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Yearly<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Mon<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Tue<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Wed<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Thu<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Fri<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Sat<input type='checkbox'><span class="checkmark"></span></label>
-                            <label class="reocChoice">Sun<input type='checkbox'><span class="checkmark"></span></label>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="subm">
-                    <input type="submit" id="calSubmit" class='pbutton' value="Confirm">
-                </div>
-            </form>  
-        </div>
-    </div>
-
-    <div class='accountPage page rightPage text'>
-        <div class='genBar'>
-            <button><img class='icon back' src='img/back.png'></button>
-            <button><img class='icon' id='setting' src='img/setting.png'></button>
-        </div>
-        <div class='info' style='text-align: center;'>
-            <p></p>
-            <a href='#'><img id='profilePic' src='img/profile.png'></a>
-            <p style='font-size: 28px; font-weight: 900;'>Jianan Liang</p>
-            <p style='font-size: 14.5px; margin-top: -10px;'>jil1064@ucsd.edu</p>
-            <button id='editAccount'>account</button>
-            <div id='extendCard'>
-                <br>
-                <p>Screenshot-insert/Integrate</p>
-                <div style='margin-top: -4px;'>
-                    <button><img class='icon2' id='screenshotAI' src='img/ScreenshotAI.png'></button>
-                    <button><img class='icon2' id='gooCal' src='img/gooCal.jpg' style='margin-left: 25px;'></button>
-                </div>
-                <br>
-            </div>
-        </div>
-    </div>
-
-    <div class='editAccountPage page rightPage text'>
-        <div class='genBar'>
-            <button><img class='icon back' src='img/back.png'></button>
-            <button><img class='icon' id='ok' src='img/ok.png'></button>
-        </div>
-        <div class='editAccountInfo' style='text-align: center;'>
-            <br>
-            <input type='name' id='editAccountName' placeholder="Jianan Liang" style='width: 85%;'><br><br>
-            <input type='email' id='editAccountEmail' placeholder="jil1064@ucsd.edu" style='width: 85%;'><br><br>
-            <input type='password' id='editAccountPw' placeholder="*************" style='width: 85%;'><br><br>
-            <input type='password' id='confirmAccountPw' placeholder="confirm password" style='width: 85%;'>
-        </div>
-    </div>
-
-    <div class='settingPage page rightPage text'>
-        <div class='genBar'>
-            <button><img class='icon back' src='img/back.png'></button>
-        </div>
-        <div class='info'>
-            <div class='allowNotifyDiv' style='position: relative; cursor: pointer;'>
-                <p>Notifications</p>
-                <button class='allowNotify'></button>
-            </div>
-            <br>
-            <button id='logOut' class='text'>log out</button>
-
-        </div>
-    </div>
-
-    <div class='screenshotAIPage page rightPage text'>
-        <div class='genBar'>
-            <button><img class='icon back' src='img/back.png'></button>
-            <button><img class='icon AIcomplete' id='ok' src='img/ok.png'></button>
-            <button></button>
-        </div>
-        <div class='info sAI1'>
-            <div id="drop-area" class='text'>
-                <form class="my-form">
-                    <p>Drop image/pdf here or</p>
-                    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-                    <label id="selectFile" for="fileElem">Select file</label>
-                </form>
-            </div>
-            <button><img class='icon' id='AInext' src='img/next.png'></button>
-        </div>
-        <div class='info sAI2' style='display: none;'>
-            <p></p>
-            <button id='reoc2' class="text" data-toggle="collapse" href="#reocGroup2" role="button"
-                    aria-expanded="false" aria-controls="reocGroup2">&SmallCircle; Reoccur?
-            </button>
-            <div class="collapse" id="reocGroup2">
-                <div class="card card-body">
-                    <p>end&emsp;<input id='occurUntil' placeholder="2019-12-27" onfocus="(this.type='date')"
-                                       onblur="(this.type='text')" style='width: 135px'></p>
-                    <div style='column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;  margin: -10px 0 10px 0;'>
-                        <label class="reocChoice">Weekly<input type='checkbox'><span class="checkmark"></span></label>
-                        <label class="reocChoice">Biweekly<input type='checkbox'><span class="checkmark"></span></label>
-                        <label class="reocChoice">Monthly<input type='checkbox'><span class="checkmark"></span></label>
-                        <label class="reocChoice">Yearly<input type='checkbox'><span class="checkmark"></span></label>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p>
-                    <span style='text-decoration: underline'>workshop</span><br>
-                    7/29 8:00am-10:30am<br>
-                    <span style='text-decoration: underline'>ECON 100A</span><br>
-                    Tu Thu 10:30am-10:50am<br>
-                    <span style='text-decoration: underline'>COGS 127</span><br>
-                    Mon Wed Fri 3:00pm-3:50pm
-                </p>
-            </div>
-        </div>
-
-    </div>
-
+    {{> slotEdit}}
+    
+    {{> profile}}
 
 </div>
 
