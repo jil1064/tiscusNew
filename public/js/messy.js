@@ -20,6 +20,7 @@ $(document).ready(function () {
     }
 
     pageStack('#select_next', '.tmConfirm');
+    pageStack('#newTc', '.selectPage');
 
 $('.timeSlot').click(function () {
     var y = $(this).position().top;
@@ -43,21 +44,27 @@ $('#createSlot').click(function () {
     $('.colorDot').css('border', '5px solid white');
     $('#blueDot div').css('border', 'none');
 //    $('#setDate').attr("placeholder", "Date");
-    $('.editPage').fadeIn();
+    $('.createSlotPage').fadeIn();
+    clearForms();
 });
+
+function clearForms() {
+    $(':input').not(':button, :submit, :reset, :hidden, :checkbox, :radio').val('');
+    $(':checkbox, :radio').prop('checked', false);
+}
 
 $('#todayEdit').click(function () {
     $('.rightPage').fadeOut();
     $('.editPage').fadeIn();
 });
 
-$('.monthEvent').click(function () {
-    $('.rightPage').fadeOut();
-    $('.editPage').fadeIn();
-    var color = $(this).css('background-color');
-    $('.editBar').css('background-color', color);
-    $('.colorDot').css('border', '5px solid white');
-});
+//$('.monthEvent').click(function () {
+//    $('.rightPage').fadeOut();
+//    $('.editPage').fadeIn();
+//    var color = $(this).css('background-color');
+//    $('.editBar').css('background-color', color);
+//    $('.colorDot').css('border', '5px solid white');
+//});
 
 $('#todayDate').click(function () {
     $('.monthView').toggle("fast");
@@ -102,13 +109,6 @@ $('#setting').click(function () {
     $('.settingPage').fadeIn();
 });
 
-$('#funcITC').click(function () {
-    $('.sAI2').fadeOut();
-    $('.imgtocalPage').fadeIn();
-    $('.sAI1').fadeIn();
-    $('.AIcomplete').css('opacity', '0');
-});
-
 $('#AInext').click(function () {
     $('.sAI1').toggle();
     $('.sAI2').fadeIn();
@@ -136,7 +136,14 @@ $('#functional, .funcicon').click(function () {
 });
 
 $('#funcMeet').click(function () {
-    $('.meetPage').fadeIn();
+    $('.tcHomePage').fadeIn();
+});
+
+$('#funcITC').click(function () {
+    $('.sAI2').fadeOut();
+    $('.imgtocalPage').fadeIn();
+    $('.sAI1').fadeIn();
+    $('.AIcomplete').css('opacity', '0');
 });
 
 $('#funcWITH').click(function () {

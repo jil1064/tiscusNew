@@ -23,32 +23,24 @@
         <div class="col-sm-4" style="text-align: center;">
     
             <div class="signup">
-                <span class='normalt' style='color: white; font-size: 30px;'>Sign Up</span>
-                <br><br>
-                <div class='step1'>
-                    <input id='veriEmail' type="text" name="email" placeholder="email">
+                <form id="signupForm" oninput="validateSignup()">
+                    <input type="text" name="email" placeholder="email">
                     <br><br>
-                    <input id='sendCode' type="button" value="Send verification code"/>
+                    <input type="text" name="username" placeholder="first & last name">
                     <br><br>
-                    <input type="text" name="verify" placeholder="Insert code here">
-                    <br><br>
-                    <input id="verifyCode" type="button" value="Verify"/>                   
-                </div>
-                <form id="signupForm" oninput="validateSetup()" style='display: none;'>
-                    <p id='signupEmail' style='color: white'></p>
                     <input type="text" name="password" placeholder="Set password">
-                    <br><br>
+                    <br>
+                    <p id='pwError'>Your passwords don't match.</p>
                     <input type="text" name="password" placeholder="Confirm password">
                     <br><br>
-                    <p style='color: white'>Select timezone:</p>
+                    <p style='color: white'>Timezone:</p>
                     <select name="timezone" id="setTimezone">
                         <option value="0" selected>Pacific Time</option>
                         <option value="1">Central Time</option>
                         <option value="2">Eastern Time</option>
                     </select>
-                    <br><br><input type="button" id="confirmSignup" value="Confirm"/>
-                </form>        
-                    <br><div id='errorHint'>Oops, the verification code<br> is not correct.</div>    
+                    <br><br><input type="button" id="confirmSignup" style='font-size: 24px;' value="Sign Up"/>
+                </form>           
             </div>
             
         </div>
@@ -93,13 +85,8 @@ input[type=button] {
     width: auto;
 }
     
-#errorHint {
-    color: #5986fd; 
-    background: white; 
-    opacity: .75; 
-    margin: 0 2.5vw; 
-    padding: .5vw; 
-    border-radius: 5px;
+#pwError {
+    color: white; 
 }
     
 
@@ -121,43 +108,9 @@ input[type=button] {
     input[type=button] {
         border-radius: 5vw;
     }
-    
-    #errorHint {
-        margin: 0vw;
-    }
 
 }
     
 </style>
     
-<script>
-    
-$('#sendCode').click(function(){
-    $(this).prop('disabled', true);
-    $(this).css('opacity', '.8');
-    for (let i = 0; i < 60; i++) {
-        setDelay(i);
-    }
-    setTimeout(function(){
-        $(this).prop('disabled', false);
-        $(this).val('Send verification code');
-        $(this).css('opacity', '1');
-    }, 60000);
-}); 
-    
-function setDelay(i) {
-  setTimeout(function(){
-        var j = 60 - i;
-        $('#sendCode').val('Resend after ' + j + 's');
-  }, 1000*i);
-}
-    
-$('#verifyCode').click(function(){
-    //Ajax
-    $('#signupEmail').html($('#veriEmail').val());
-    $('.step1').hide();
-    $('#signupForm').fadeIn();
-}); 
-
-    
-</script>
+<script src="js/validate.js"></script>

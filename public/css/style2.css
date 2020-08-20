@@ -1,8 +1,3 @@
-.ads {
-    display: block;
-    background: none;
-}
-
 .monthView {
     z-index: 400;
     width: 31vw;
@@ -692,9 +687,6 @@ input {
 }
 
 @media (max-width: 480px) {
-    .ads {
-        display: none;
-    }
 
     .checkmark {
         width: 15px;

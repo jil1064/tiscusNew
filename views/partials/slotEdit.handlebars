@@ -1,4 +1,4 @@
-<div class='editPage page rightPage text'>
+<div class='createSlotPage page rightPage text'>
 
         <div class='editBar'>
             <button><img class='icon back' src='img/back.png'></button>
@@ -26,17 +26,18 @@
 <!--                    <button id='grayDot'>-->
                         <div class='colorDot' style='background:#DADADA'></div>
                 </div>   
-                <p class='normalt'>Date<span style='color: red'>*</span><br>
-                <input id='setDate' placeholder="08/18/2020" onfocus="(this.type='date')" style='width: 80%'></p>
+                <p class='normalt'>Date<span style='color: red'>*</span>&nbsp;
+                <input id='setDate' type="text" placeholder="m/d/yyyy" readonly style='width: 80%'></p>
                 <p class='normalt'>Time<span style='color: red'>*</span><br>
-                <input id='setTime1' placeholder="09:00 AM" onfocus="(this.type='time')" style='width: 40%'>&nbsp;-&nbsp;&nbsp;
-                    <input id='setTime2' placeholder="10:00 AM" onfocus="(this.type='time')" style='width: 40%'><br></p>    
+                <input id='setTime1' type="time" style='width: 46%'>&nbsp;-&nbsp;
+                    <input id='setTime2' type="time" style='width: 46%'><br></p>    
                 <button id='reoc' class="text" data-toggle="collapse" href="#reocGroup" role="button" aria-expanded="false"
                         aria-controls="reocGroup">&SmallCircle; Reoccur?
                 </button>
                 <div class="collapse" id="reocGroup">
                     <div class="card card-body">
-                        <p>end&emsp;<input id='occurUntil' placeholder="12/01/2020" onfocus="(this.type='date')" style='width: 135px;'></p>
+                        <p>start&emsp;<input id='occurStart' type="text" placeholder="m/d/yyyy" readonly style='width: 64%; position: absolute; left: 25%;'><br>
+                        end&emsp;<input id='occurUntil' type="text" placeholder="m/d/yyyy" readonly style='width: 64%; position: absolute; left: 25%;'></p>
                         <div style='column-count: 3; -moz-column-count: 3; -webkit-column-count: 3; margin-top: -10px;'>
                             <label class="reocChoice">Daily<input type='checkbox'><span class="checkmark"></span></label>
                             <label class="reocChoice">Monthly<input type='checkbox'><span class="checkmark"></span></label>

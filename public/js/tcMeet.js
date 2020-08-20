@@ -178,51 +178,6 @@ $("#select_next").click(function () {
 //      }
 //  }};
 
-$(document).ready(function () {
-    $(function () {
-        console.log("datepicker");
-        $("#first_date").datepicker();
-        $("#second_date").datepicker();
-    });
-
-});
-
-//日期选择
-$("#first_date").datepicker({
-    dateFormat: "m/d/yy",
-    changeMonth: true,
-    changeYear: true,
-    minDate: "+0d"
-});
-$("#second_date").datepicker({
-    dateFormat: "m/d/yy",
-    changeMonth: true,
-    changeYear: true,
-
-});
-
-
-//表单提交前的验证
-function validate() {
-    document.getElementById('submit').style.display = "none";
-    var event_title = $('#tcTitle');
-    var meeting_hr = document.getElementById('hr');
-    var meeting_min = document.getElementById('min');
-    var time = meeting_hr.value + meeting_min.value;
-    var date = document.getElementById('first_date');
-    var start_date = $('#first_date').datepicker().val();
-
-    /*check for required questions not empty/checked  确认必填问题已输入信息*/
-    if (event_title.value != "" && time != 000 && first_date.value != "") {
-        console.log("in here");
-        //note打字时反复，需修改
-        $('#submit').show();
-    } else {
-        console.log("else");
-        document.getElementById('submit').style.display = "none";
-    }
-}
-
 //自动生成第二个日期（3天间隔）
 $('#first_date').change('input', function () {
     document.getElementById('second_date').removeAttribute("disabled");

@@ -55,6 +55,11 @@
     position: fixed;
 }
 
+.ads {
+    display: block;
+    background: none;
+}
+
 .editBar, .genBar {
     display: inline-block;
     background-color: #5986FD;
@@ -78,7 +83,7 @@
 .info {
     position: absolute;
     top: 3.5vw;
-    height: calc(11.5vw + 280px);
+    height: calc(19vw + 200px);
     width: 100%;
     padding: 1.3vw 2.2vw 0 2.2vw;
     overflow: scroll;
@@ -186,6 +191,10 @@
         width: 100%;
         height: 100%;
     }
+    
+    .ads {
+        display: none;
+    }
 
     .editBar, .genBar {
         height: 15vw;
@@ -193,7 +202,7 @@
 
     .info {
         top: 15vw;
-        height: 90vh;
+        height: 96vh;
         padding: 4vw 10vw;
     }
 

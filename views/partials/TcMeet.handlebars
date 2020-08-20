@@ -1,4 +1,3 @@
-<link href="/css/TcMeet.css" rel="stylesheet">
 <link href="/css/fidella7.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.css">
@@ -88,7 +87,45 @@
 </div>
 -->
 
-<div class='selectPage page leftPage text' style="display: inline-block;">
+<div class='tcHomePage page leftPage text'>
+  <div class='genBar' style="clear: both;">
+      <p class="title">TcMeet Events</p>
+      <button><img class='icon back' src='img/back.png'></button>     
+  </div>
+  <div class="info">
+    <div class="wrapper">
+      <div class="event">
+          <div class="members">
+              <img class='event_ppt' src='img/profile.png'>
+              <img class='event_ppt' src='img/profile.png'>
+              <img class='event_ppt' src='img/profile.png'>
+              <img class='event_ppt' src='img/profile.png'>
+              <div class='event_ppt'>+2</div>
+          </div>
+          <div class="event_info pending">
+              <p class="meeting_name">Meet for Lunch<br>
+                  <span class="meeting_detail">Pending: Mark B. and 2 more</span></p>
+          </div>
+      </div>
+      <div class="event">
+          <div class="members">
+              <img class='event_ppt' src='img/profile.png'>
+              <img class='event_ppt' src='img/profile.png'>
+              <img class='event_ppt' src='img/profile.png'>
+          </div>
+          <div class="event_info okay">
+              <p class="meeting_name">Cogs 120 Meeting<br>
+                  <span class="meeting_detail">Mon | Apr 20 | 11:30am - 12:30pm</span></p>
+          </div>
+      </div>
+      <div class="btn_styling">
+          <div id='newTc' class="add_btn">+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='selectPage page leftPage text'>
     <div class='genBar'>
         <p class="title">New Event</p>
         <button><img class='icon back' src='img/back.png'></button>
@@ -125,7 +162,7 @@
     <div class='genBar' style="clear: both;">
         <p class="title">New Event</p>
         <button><img class='icon back' src='img/back.png'></button>
-        <a class="cancelLabel">Cancel</a>
+        <div class="cancelLabel nonimpt">Cancel</div>
     </div>
     <div class="info">
         <p id="ppt_lbl" class='nonimpt'>Participants</p>
