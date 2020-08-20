@@ -5,11 +5,44 @@ const Users = require('../model/users');
 //加密模块
 const crypto = require("crypto");
 /**
+ * 登录页面
+ * 访问方式:GET
+ * @author FengXuan
+ * @version 0.1
+ * @ignore 创建时间 2020年8月20日
+ * @ignore 上次修改时间 2020年8月20日
+ */
+router.get('/login',(request,response)=>{
+    response.render('login')
+})
+
+router.post('/login',(request,response)=>{
+    let {email} = request.query;
+    let {password} = request.query;
+    let md5 = crypto.createHash("md5");
+    password = md5.update(password).digest("hex");
+    let users=Users.findOne({email:email,password:password});
+    users.exec(function (error, result) {
+        request.session.LOGIN_USER=result;
+        response.json(result);
+    });
+})
+
+/**
+ * 注册页面
+ * 访问方式：GET
+ *
+ */
+router.get('/signup',(request,response)=>{
+    response.render('signup')
+})
+
+/**
  * 注册方法
  * @author FengXuan
  * @version 0.1
  * @ignore 创建时间 2020年7月26日
- * @ignore 上次修改时间 2020年7月26日
+ * @ignore 上次修改时间 2020年8月20日
  */
 router.post('/register', (request, response) => {
     //获得参数值
@@ -40,18 +73,10 @@ router.post('/register', (request, response) => {
             error: error,
             result: result
         });
+        //注册后将注册信息存入session中
+        request.session.LOGIN_USER=result;
     })
-    user = null;
 })
-
-router.get('/login',(require,response)=>{
-    response.render('login')
-})
-
-router.get('/signup',(require,response)=>{
-    response.render('signup')
-})
-
 /**
  * 查询用户信息
  * @author 风灵玄
