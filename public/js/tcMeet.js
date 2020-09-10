@@ -179,29 +179,6 @@ $("#select_next").click(function () {
 //  }};
 
 //自动生成第二个日期（3天间隔）
-$('#first_date').change('input', function () {
-    document.getElementById('second_date').removeAttribute("disabled");
-    var start_date = $('#first_date').datepicker('getDate');
-    $("#second_date").datepicker("option", "minDate", new Date((start_date.getMonth() + 1) + "/" + start_date.getDate() + "/" + start_date.getFullYear()));
-    var end_date = start_date.setDate(start_date.getDate() + 2);
-    end_date = new Date(end_date);
-
-    $('#second_date').datepicker('option', 'maxDate',
-        new Date((end_date.getMonth() + 1) + "/" + end_date.getDate() + "/" + end_date.getFullYear())).datepicker('setDate', end_date);
-
-    var event_title = $('#tcTitle');
-    var meeting_hr = document.getElementById('hr');
-    var meeting_min = document.getElementById('min');
-    var time = meeting_hr.value + meeting_min.value;
-    if (event_title.value != "" && time != 000 && first_date.value != "") {
-        console.log("in here");
-        $('#submit').show();
-    } else {
-        console.log("else");
-        document.getElementById('submit').style.display = "none";
-    }
-});
-
 
 //提交表单
 function initCreateTc() {

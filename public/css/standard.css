@@ -60,6 +60,14 @@
     background: none;
 }
 
+.monthView {
+    z-index: 400;
+    width: 31vw;
+    height: 100vh;
+    left: 34.5vw;
+    top: 0;
+}
+
 .editBar, .genBar {
     display: inline-block;
     background-color: #5986FD;
@@ -161,6 +169,10 @@
 
 .blue4 {
     background: #e6edff;
+}
+
+.blue5 {
+    background: #eff3ff;
 }
 
 @media (max-width: 480px) {

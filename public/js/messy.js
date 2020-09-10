@@ -3,8 +3,26 @@ $(document).ready(function () {
     $(".welcome").fadeIn(1000);
     $(".welcome").delay(1000);
     $(".welcome").fadeOut(1000);
-   initCreateTc();
+    showDayEvents('2020-08-27');
+    initCreateTc();
 });
+
+function showDayEvents(targetDate) {
+    $.ajax({ 
+      url: 'calendar/showDayEvents',              
+      type: 'post',          
+      data: { 
+          targetDate: targetDate
+      },
+        success: function(data){
+            let resultDaySource = $('#resultDayTp').html();
+            let resultDayTp = Handlebars.compile(resultDaySource);
+            $('.todayEvents').append(resultDayTp(data));
+            console.log(data);
+        }
+    });
+}
+
 
     function pageTransition(x, y, z) {
       $(x).click(function(){
@@ -22,7 +40,8 @@ $(document).ready(function () {
     pageStack('#select_next', '.tmConfirm');
     pageStack('#newTc', '.selectPage');
 
-$('.timeSlot').click(function () {
+$(document).on('click', '.timeSlot', function() {
+//$('.timeSlot').click(function () {
     var y = $(this).position().top;
     var yy = Math.floor(y + 115).toString() + 'px';
     $('#todayDel').animate({'top': yy}, "fast");
@@ -40,9 +59,10 @@ $(".todayEvents").scroll(function () {
 
 $('#createSlot').click(function () {
     $('.rightPage').fadeOut();
-    $('.editBar').css('background-color', '#5986fd');
+    $('.editBar').css('background', '#5986fd');
     $('.colorDot').css('border', '5px solid white');
-    $('#blueDot div').css('border', 'none');
+    $('#themeDot').css('border', 'none');
+    $('#calSubmit').css('background', '#5986fd');
 //    $('#setDate').attr("placeholder", "Date");
     $('.createSlotPage').fadeIn();
     clearForms();
@@ -67,8 +87,13 @@ $('#todayEdit').click(function () {
 //});
 
 $('#todayDate').click(function () {
-    $('.monthView').toggle("fast");
-    $(this).toggleClass('todayDate2');
+    let str = $(this).html();
+    let month = str.substr(0,2);
+    let day = str.substr(3,2);
+    let currentDate = new Date();
+    currentDate.setFullYear(2020, Number(month)-1, Number(day));
+    $('#selectMonth').datepicker('setDate', currentDate);
+    $('.monthView').fadeIn();
 });
 
 $('#chooseMonth').click(function () {
@@ -78,16 +103,6 @@ $('#chooseMonth').click(function () {
 
 $('.back, #ok, #reject, #accept').click(function () {
     $(this).parent().parent().parent().fadeOut();
-});
-
-var color = '#5986fd';
-$('.colorDot').click(function () {
-    $('.colorDot').css('border', '5px solid white');
-    $(this).css('border', 'none');
-    color = $(this).css('background');
-    $('.editBar').css('background', color);
-    $('#calSubmit').css('background', color);
-//    $('#calNotes').css('border-color', color);
 });
 
 $('#delThis, #delTc, #delReoc, #confirm').click(function () {

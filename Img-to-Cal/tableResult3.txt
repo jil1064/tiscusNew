@@ -1,0 +1,18 @@
+****** Result for Image/Page 1 ******
+My Schedule: Create new, copy, rename..	Add Event	
+List	Calendar	Finals	Print Schedule | View Book List	
+Subject	Course	Title	Section Type	Code	Instructor	Grade Units	Option	Days	Time	BLDG Room	(Position)	Status	Action	
+COGS 107A Neuroanatomy and Physiology	A00	LE Boyle, Mary E. T	L	4.00	TuTh	2:00p-3:20p CSB	001	Enrolled	Drop	Change	
+A02	LA	W	5:00p-550p CENTR 222	
+Final Exam	H	Th 03/19/2020	3:00p-5.59p TBA	TBA	
+COGS 120	Interaction Design	A00 LE Klemmer, Scott R	5.00	TuTh	9:30a-10:50a CICC	101 Enrolled	Dro p	Change	
+A04	10:10a-11:20a GSB	272	
+|Final Exam	H	Tu 03/17/2020	8:00a-1059a TBA	TBA	
+ECON 172A Operations Research A	A00	LE Newhouse, Herbert S	4.00	MWF	1:00p-1:50p CENTR 113	Enrolled	Drop Change	
+A01	DI	T:00p-7:50p	HSS	1330	
+Final Exam	FI	F 03/20/2020	11:30a-2:29p	TBA	TBA	
+ECON 178 Economic&Business Forecasting	A00	LE Zhu, Ying	4.00	TuTh	11:00a-12:20p WLH2204 Enrolled	Drop	Change	
+A01	DI	M	3:00p-3:50p WLH2205	
+|Final Exam	Th 03/19/2020	11:30a-2:29p	TBA	TBA	
+MUS 173	Electronic Music Prod & CompP	A00 LE Britt, King JamesS	PINP4.00	Tulh	12:30p-1:50p CPMC 367	Enrolled	Drop	Change	
+

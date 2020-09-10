@@ -10,6 +10,7 @@ const options = {
 };
 //连接数据库
 mongoose.connect(DB_URL,options);
+
 //获得数据库连接
 const db = mongoose.connection;
 /**
@@ -32,4 +33,3 @@ db.on('disconnected', function () {
 });
 
 module.exports=mongoose;
-

@@ -1,4 +1,26 @@
-<div class='page monthView'>
+<div class="today text">
+        <button>
+            <div id="todayDate">08/27 Thu</div>
+        </button>
+        <button><img class='icon' id='notiBell' src='img/notiBell2.png'></button>
+        <button><img class='icon' id="createSlot" src='img/createSlot.png'></button>
+        <button data-toggle="modal" data-target="#deleteModal"><img class="icon" id="todayDel" src="img/delete.png">
+        </button>
+        <button><img class="icon" id="todayEdit" src="img/edit.png"></button>
+    
+        <div class='todayEvents'>
+                     
+
+<!--            <br><br><br><br><br><br>-->
+        </div>
+</div>
+
+
+<div class='page monthView'>  
+    <div>
+        <button><img class='icon back' src='img/back2.png'></button>
+        <input type="mext" id='selectMonth' class='normalt'>
+    </div>
         <div class='monthBar text'>
             <div class='planetDays'>Sun</div>
             <div class='planetDays'>Mon</div>
@@ -8,238 +30,37 @@
             <div class='planetDays'>Fri</div>
             <div class='planetDays'>Sat</div>
             <br>
-            <button id='chooseMonth'><img class='icon' src='img/choose.png'></button>
-            <input type="month" id='selectMonth'>
         </div>
         <div class='dayInfo'>
             <div class='dayCard'>
-                <div class='monthDate'><a href='#'>23</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
+                <div class='monthDate'>1</div>
+                <div class='monthEvent'>Converge</div>
+                <div class='monthEvent'>Converge</div>
+                <div class='monthEvent'>Converge</div>
+                <div class='monthEvent'>Converge</div>
             </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>24</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>25</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>26</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>27</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>28</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>29</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>30</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>1</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>2</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
-            <div class='dayCard'>
-                <div class='monthDate'><a href='#'>3</a></div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-                <div>
-                    <button class='monthEvent'>Converge</button>
-                </div>
-            </div>
+            <div class='dayCard blue5'><div class='monthDate'>2</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div></div>
+            <div class='dayCard'><div class='monthDate'>3</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div></div>
         </div>
     </div>
 
-    <div class="today text">
-        <button>
-            <div id="todayDate" class='todayDate1' style='z-index: 799;'>06/27 Thu</div>
-        </button>
-        <button><img class='icon' id='notiBell' src='img/notiBell2.png'></button>
-        <button><img class='icon' id="createSlot" src='img/createSlot.png'></button>
-        <button data-toggle="modal" data-target="#deleteModal"><img class="icon" id="todayDel" src="img/delete.png">
-        </button>
-        <button><img class="icon" id="todayEdit" src="img/edit.png"></button>
-        <div class='todayEvents'>
-            <script id="todayEventRender" type="text/x-handlebars-template">
-                <div class="timeSlot">
-                    <p>{{start_time}} - {{start_time}}</p>
-                    <button>
-                        <div class="timeCard" style='border-color: {{slotColor}};'>{{slotNotes}}</div>
-                    </button>
-                </div><br>
-            </script>
-            
-            
-            <div class="timeSlot">
-                <p>9:00am-12:00pm</p>
-                <button>
-                    <div class="timeCard" style="border-color: #ffb999">Converge workshop; Basement</div>
-                </button>
-            </div>
-            <br>
-            <div class="timeSlot">
-                <p>9:00am-12:00pm</p>
-                <button>
-                    <div class="timeCard" style="border-color: #ffdd00">Converge workshop; Basement</div>
-                </button>
-            </div>
-            <br>
-            <div class="timeSlot">
-                <p>9:00am-12:00pm</p>
-                <button>
-                    <div class="timeCard" style='border-color: #5986FD;'>Converge workshop; Basement</div>
-                </button>
-            </div>
-            <div class="timeSlot">
-                <p>9:00am-12:00pm</p>
-                <button>
-                    <div class="timeCard" style='border-color: #0091bd;'>Converge workshop; Basement</div>
-                </button>
-            </div>
-            <br>
-            <div class="timeSlot">
-                <p>9:00am-12:00pm</p>
-                <button>
-                    <div class="timeCard" style="border-color: #bd0042">Converge workshop; Basement</div>
-                </button>
-            </div>
-            <br>
-            <div class="timeSlot">
-                <p>9:00am-12:00pm</p>
-                <button>
-                    <div class="timeCard" style="border-color: #dadada">Converge workshop; Basement</div>
-                </button>
-            </div>
-            <br><br><br><br><br><br>
-        </div>
-    </div>
+<script id="resultDayTp" type="text/x-handlebars-template">
+    \{{#each this}}
+        <div class="timeSlot">
+            <p>\{{start_time}} - \{{end_time}}</p>
+            <button>
+                <div class="timeCard" style='border-color: \{{color}};'>\{{title}}</div>
+            </button>
+        </div><br>
+    \{{/each}}
+</script>
+
+<script>
+
+function testView() {
+    var i;
+    for (i=1; i<30; i++){
+    $('.dayInfo').append("<div class='dayCard'><div class='monthDate'>" + i + "</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div><div class='monthEvent'>Converge</div></div> ");
+    }
+}
+</script>
